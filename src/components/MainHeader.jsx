@@ -3,18 +3,18 @@ import React, { useState, useEffect } from "react";
 function MainHeader({ MainHeaderClassName, toggleMenu }) {
   const [fadeIn, setFadeIn] = useState(false);
 
-  // useEffect(() => {
-  //   setFadeIn(true);
-  // }, []);
+  useEffect(() => {
+    setFadeIn(true);
+  }, []);
 
-  // const fadeInStyle = {
-  //   opacity: fadeIn ? 1 : 0,
-  //   transition: "opacity 500ms linear",
-  // };
+  const fadeInStyle = {
+    opacity: fadeIn ? 1 : 0,
+    transition: "opacity 1500ms linear",
+  };
 
   return (
     <>
-      <header className={MainHeaderClassName}>
+      <header style={fadeInStyle} className={MainHeaderClassName}>
         <div class="logo">
           <span class="primary--purple  p-6 m-5as">Elite</span> Splash Pools
         </div>

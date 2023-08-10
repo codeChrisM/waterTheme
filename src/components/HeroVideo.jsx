@@ -1,11 +1,19 @@
 import React from "react";
-import "./styles/styles.scss";
+import { useEffect, useState } from "react";
 // import "./styles/styles.css";
 
 export default function HeroVideo() {
+  const videoBackground = "video-background";
+  const [intro, setIntro] = useState("");
+  const combinedClassName = videoBackground + intro;
+
+  useEffect(() => {
+    setIntro("intro");
+  }, [intro]);
+
   return (
-    <section class="hero">
-      <div class="video-background">
+    <section className="hero">
+      <div className={combinedClassName}>
         <div id="ytplayer2"></div>
 
         <div id="vidtop-content">
