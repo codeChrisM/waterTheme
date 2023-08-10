@@ -18,10 +18,7 @@ function MainHeader({ MainHeaderClassName, toggleMenu }) {
         <div class="logo">
           <span class="primary--purple  p-6 m-5as">Elite</span> Splash Pools
         </div>
-        <button
-          onClick={toggleMenu}
-          className="bg-red-500 p-4 hover:bg-green-400"
-        >
+        <button onClick={toggleMenu} className="bg-red-500 hover:bg-green-400">
           Toggle Menu
         </button>
         <a href="" class="social"></a>

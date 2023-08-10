@@ -9,7 +9,7 @@ import AboutUs from "./components/AboutUs";
 // import "./components/styles/styles.scss";
 
 const MainHeaderClassName =
-  "bg-black-600 border-2 border-white text-white top-0 z-999 block fixed w-full h-16 flex justify-between items-center px-4";
+  "";
 const gradient = `linear-gradient(
     to bottom,
     rgba(173, 216, 230, 0) 0px,
@@ -30,7 +30,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <MainHeader
         MainHeaderClassName={MainHeaderClassName}
         toggleMenu={toggleMenu}
@@ -38,11 +38,12 @@ const App = () => {
       <div id="" className="wrapper wrapper--body  relative">
         <SlideOutComponent isMenuVis={isMenuVisible} />
         <HeroVideo />
+
     <div style={styles} className="relative  border-black  rounded-full   ">
       <AboutUs /> 
 
         </div>
-        <WaterDrops /> 
+        {/* <WaterDrops />  */}
       </div>
     </div>
   );
