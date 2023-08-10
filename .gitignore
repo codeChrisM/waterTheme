@@ -1,0 +1,39 @@
+# Ignore system and IDE files
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore package managers
+node_modules/
+vendor/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Ignore sensitive or configuration files
+config.js
+secrets.txt
+
+# Ignore OS-generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Ignore compiled code and build artifacts
+/build/
+/dist/
+/out/
+
+# Ignore dependency lock files
+yarn.lock
+package-lock.json
+composer.lock
