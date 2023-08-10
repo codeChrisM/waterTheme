@@ -9,7 +9,7 @@ import AboutUs from "./components/AboutUs";
 // import "./components/styles/styles.scss";
 
 const MainHeaderClassName =
-  "bg-black-600 border-2 border-white text-white top-0 z-99 ";
+  "bg-black-600 border-2 border-white text-white top-0 z-999 block fixed w-full h-16 flex justify-between items-center px-4";
 const gradient = `linear-gradient(
     to bottom,
     rgba(173, 216, 230, 0) 0px,
@@ -19,7 +19,7 @@ const gradient = `linear-gradient(
 
 const styles = {
   width: "100%",
-//   height: "300px",
+height: "500px",
   background: gradient,
 };
 
@@ -38,11 +38,11 @@ const App = () => {
       <div id="" className="wrapper wrapper--body  relative">
         <SlideOutComponent isMenuVis={isMenuVisible} />
         <HeroVideo />
-        <div style={styles} className="relative">
-          <AboutUs />
+    <div style={styles} className="relative  border-black  rounded-full   ">
+      <AboutUs /> 
 
-          {/* <WaterDrops /> */}
         </div>
+        <WaterDrops /> 
       </div>
     </div>
   );
