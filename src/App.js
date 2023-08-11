@@ -8,19 +8,11 @@ import HeroVideo from "./components/HeroVideo";
 import AboutUs from "./components/AboutUs";
 // import "./components/styles/styles.scss";
 
-const MainHeaderClassName =
-  "";
-const gradient = `linear-gradient(
-    to bottom,
-    rgba(173, 216, 230, 0) 0px,
-    rgba(173, 216, 230, 1) 200px,
-    rgba(173, 216, 230, 1) 300px
-  )`;
+const MainHeaderClassName = "";
 
 const styles = {
   width: "100%",
-height: "500px",
-  background: gradient,
+  // height: "340px",
 };
 
 const App = () => {
@@ -39,11 +31,11 @@ const App = () => {
         <SlideOutComponent isMenuVis={isMenuVisible} />
         <HeroVideo />
 
-    <div style={styles} className="relative  border-black  rounded-full   ">
-      <AboutUs /> 
-
+        <div style={styles} className="relative rounded-full ">
+          <AboutUs />
+        
         </div>
-        {/* <WaterDrops />  */}
+        <WaterDrops />
       </div>
     </div>
   );

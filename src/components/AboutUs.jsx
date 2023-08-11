@@ -35,7 +35,7 @@ const AboutUs = () => {
   return (
     <div
       style={combinedStyles}
-      className="my-4 bg-blue-500 pt-56 pr-6 pl-3 pb-6 relative border-r-0"
+      className="my-4 bg-purple-950 pt-56 pr-6 pl-3 pb-6 relative border-r-8 "
     >
       <h2
         style={styles__FloatAnimation_B}

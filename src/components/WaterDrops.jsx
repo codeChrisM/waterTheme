@@ -1,43 +1,38 @@
 import React from "react";
 import "./styles/WaterDrops.css"; // Import css modules stylesheet as styles
 
+let AnimationStyles = {
+  transitionDuration: "0.5s",
+  transitionProperty: "all",
+};
+
 function WaterDrops() {
   return (
-    <div>
-      {/* <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> */}
-      {/* <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet"> */}
-      <section class="cards">
-        <div class="container">
-          <div class="drop">
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptas, voluptatem.
+    <div
+      style={{ backgroundColor: "#415eb9" }}
+      className="text-white rounded-lg "
+    >
+      <section className="cards">
+        <div className="container flex mx-8 ">
+          <div class="drop  ">
+            <h2 className="font-bold text-2xl">The Elite Difference</h2>
+            <p className="text-xl">
+              Learn about the Elite stands out vs the competitors
             </p>
-            <a class="read-btn" href="#">
-              Read More
-            </a>
+            <button
+              style={AnimationStyles}
+              className="bg-gray-900 hover:bg-purple-600  text-white font-bold py-2 px-4 rounded "
+            >
+              Hover me
+            </button>
           </div>
-          <div class="drop">
-            <h2>Card Title</h2>
+          <div className="description text-white  bg-black m-6 flex p-4 self-center ">
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptas, voluptatem.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Laboriosam voluptate sit unde ipsa et voluptatem sapiente,
+              distinctio eligendi? Perferendis molestiae ipsam ullam delectus
+              hic ipsum sed voluptatum aliquid laudantium at!
             </p>
-            <a class="read-btn" href="#">
-              Read More
-            </a>
-          </div>
-          <div class="drop">
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptas, voluptatem.
-            </p>
-            <a class="read-btn" href="#">
-              Read More
-            </a>
           </div>
         </div>
       </section>

@@ -24,11 +24,6 @@ header {
   z-index: 999;
 }
 
-.logo {
-  color: aliceblue;
-  font-size: 1.5em;
-  flex: 1;
-}
 
 .primary--purple {
   color: #415eb9;
@@ -319,24 +314,16 @@ li {
 
 
 
-#vidtop-content {
-  top: 0;
-  color: #fff;
-}
-
 .vid-info {
   position: absolute;
   top: 20em;
   left: 11vw;
   color: #fff;
-  padding: 1rem;
-  font-family: RobotoCondensed Bold, Trebuchet MS, Helvetica, Arial, sans-serif;
-  z-index: 9999;
+  z-index: 5;
 }
 
 .vid-info__name {
-  font-size: 1rem;
-  text-shadow: 3px 3px 10px #000;
+  font-size: 1.5em;
 }
 
 .vid-info__alias {
@@ -348,12 +335,11 @@ li {
 }
 
 .vid-info__summary {
-  text-shadow: 3px 3px 5px #000;
   background-color: rgba(19, 56, 159, 0.7);
-  padding: 0.5em;
+  padding: 0.5em 1em;
   border-radius: 10px;
-  width: 100%;
-  text-align: right;
+  width: auto;
+  display: inline-block;
 }
 
 /*---prob have to be injected with script--*/
@@ -364,33 +350,44 @@ iframe .vid-info {
   width: 300px !important;
 }
 
+.video-foreground {
+  border: 10px solid blue;
+}
+
 @media (min-aspect-ratio: 16/9) {
   .video-foreground {
-    height: 300%;
-    top: -100%;
+    /* height: 300%; */
+    /* top: -100%; */
   }
 }
 
 @media (max-aspect-ratio: 16/9) {
   .video-foreground {
     mix-blend-mode: multiply;
-
     filter: invert(1);
     width: 300%;
     left: -100%;
   }
 }
 
-.blue {
-  background: left 5% / 15% 60% repeat url("https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Whitsunday-and-Cube-Spa-Ocean-scaled-1920x1080.jpg");
-  width: 100%;
-  display: block;
-  height: 100vh;
+.video-foreground iframe {
+  min-height: 570px;
   background-size: cover;
   position: absolute;
   mix-blend-mode: screen;
-  /* border-radius: 100%; */
+  width: 100%;
+  display: block;
+  background: url("https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Whitsunday-and-Cube-Spa-Ocean-scaled-1920x1080.jpg") left 5% / 15% 60% repeat;
 }
+
+@media screen and (min-width: 768px) {
+  .video-foreground iframe {
+    height: 750px;
+  }
+
+}
+
+
 
 .top {
   top: 0;
@@ -402,15 +399,51 @@ iframe .vid-info {
 
 .top::before {
   content: "";
-  transform: rotate(10deg);
+  /* transform: rotate(10deg); */
   width: 90%;
   height: 800px;
   position: absolute;
   z-index: 999;
-  background: green;
+  /* background: green; */
   background: black;
-  border-radius: 50px;
+  animation: spin 15s ease-in-out infinite;
 }
+
+
+
+/* # Animation key frames to rotate .top::before 360 degrees over 25s */
+@keyframes spin {
+  0% {
+    transform: rotate(10deg);
+    /* height: 400px; */
+    width: 400px;
+    border-radius: 50px;
+  }
+
+  30% {
+    /* transform: rotate(15deg); */
+    /* height: 450px; */
+    /* width: 400px; */
+    /* border-radius: 10px; */
+  }
+
+  70% {
+    transform: rotate(15deg);
+    /* height: 450px; */
+    /* width: 450px; */
+    /* border-radius: 50px; */
+  }
+
+  100% {
+    transform: rotate(10deg);
+    /* height: 400px; */
+    width: 400px;
+    border-radius: 50px;
+  }
+
+}
+
+
 
 .container--clipped {
   background-color: red;

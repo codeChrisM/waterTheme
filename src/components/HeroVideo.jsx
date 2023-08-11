@@ -6,6 +6,16 @@ export default function HeroVideo() {
   const videoBackground = "video-background";
   const [intro, setIntro] = useState("");
   const combinedClassName = videoBackground + intro;
+  const styles = {
+    background:
+      'url("https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Whitsunday-and-Cube-Spa-Ocean-scaled-1920x1080.jpg") left 5% / 15% 60% repeat',
+    width: "100%",
+    display: "block",
+    height: "800px", // hieght must be applied inline
+    backgroundSize: "cover",
+    position: "absolute",
+    mixBlendMode: "screen",
+  };
 
   useEffect(() => {
     setIntro("intro");
@@ -14,36 +24,30 @@ export default function HeroVideo() {
   return (
     <section className="hero">
       <div className={combinedClassName}>
-        <div id="ytplayer2"></div>
-
-        <div id="vidtop-content">
-          <div class="vid-info">
-            <h1 class="vid-info__name">Welcome to</h1>
-            <h2 class="vid-info__alias">
-              <span class="primary--purple">Epic</span> Splash Pools
+        <div >
+          <div className="vid-info">
+            <h1 className="vid-info__name">Welcome to</h1>
+            <h2 className="vid-info__alias">
+              <span className="primary--purple">Elite</span> Splash Pools
             </h2>
-            <p
-              class="vid-info__summary text-white
-            "
-            >
+            <p className="vid-info__summary text-white">
               Elite Designs & Pool Installations
             </p>
           </div>
         </div>
-        <div class="top"></div>
+        <div className="top"></div>
 
-        <div class="video-foreground border-red-600 ">
+        <div className="video-foreground">
           <iframe
             src="http://www.youtube.com/embed/dKsQP_rEnhk?autoplay=1&mute=1&version=3&loop=1&list=PLV-_0_pB5OVT4oGF_U5g1sX6hRvvcDXHh"
             allowfullscreen=""
             frameborder="0"
             width="100%"
-            height="570px"
           ></iframe>
         </div>
       </div>
 
-      <div class="blue"></div>
+      <div style={styles} className="blue"></div>
     </section>
   );
 }
