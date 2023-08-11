@@ -10,10 +10,10 @@ function WaterDrops() {
   return (
     <div
       style={{ backgroundColor: "#415eb9" }}
-      className="text-white rounded-lg "
+      className="text-white rounded-3xl rounded-e-full border-gray-300 bg-opacity-70  border-y-4 "
     >
       <section className="cards">
-        <div className="container flex mx-8 ">
+        <div className="container flex md:mx-8 flex-wrap m-auto ">
           <div class="drop  ">
             <h2 className="font-bold text-2xl">The Elite Difference</h2>
             <p className="text-xl">
@@ -26,7 +26,7 @@ function WaterDrops() {
               Hover me
             </button>
           </div>
-          <div className="description text-white  bg-black m-6 flex p-4 self-center ">
+          <div className="description text-white  bg-black m-6 flex p-4 self-center rounded-xl ">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Laboriosam voluptate sit unde ipsa et voluptatem sapiente,

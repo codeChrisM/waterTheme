@@ -6,6 +6,10 @@ import SlideOutComponent from "./components/SlideOutComponent";
 import WaterDrops from "./components/WaterDrops";
 import HeroVideo from "./components/HeroVideo";
 import AboutUs from "./components/AboutUs";
+import AccordionItem from "./components/AccordianItem";
+import Footer from "./components/Footer";
+import faqData from "./data/faqData";
+import QuiltedImageList from "./components/QuiltedImageList";
 // import "./components/styles/styles.scss";
 
 const MainHeaderClassName = "";
@@ -33,9 +37,23 @@ const App = () => {
 
         <div style={styles} className="relative rounded-full ">
           <AboutUs />
-        
         </div>
         <WaterDrops />
+        <QuiltedImageList />
+        <div className="accordion-wrapper">
+          {faqData.map((item, index) => (
+            <div>
+              <AccordionItem
+                key={index}
+                question={item.question}
+                answer={item.answer}
+              />
+            </div>
+          ))}
+        </div>
+      
+
+        <Footer />
       </div>
     </div>
   );

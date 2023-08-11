@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -7,9 +7,14 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AccordionItem = ({ question, answer }) => {
   return (
-    <Accordion ClassName="accordion">
+    <Accordion style={{ backgroundColor: "100%" }} ClassName="accordion">
       <AccordionSummary
-        className="accordionSummary bg-red-600"
+        style={{
+          backgroundColor: "#eff",
+          color: "black",
+          borderBottom: "1px solid white",
+        }}
+        className="accordionSummary "
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel-content"
         id="panel-header"
@@ -17,7 +22,16 @@ const AccordionItem = ({ question, answer }) => {
         <Typography>{question}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{answer}</Typography>
+        <Typography
+          style={{
+            borderTop: "1px solid gray",
+            padding: "1em",
+            backgroundColor: "#edefef",
+            borderRadius: "10%",
+          }}
+        >
+          {answer}
+        </Typography>
       </AccordionDetails>
     </Accordion>
   );
