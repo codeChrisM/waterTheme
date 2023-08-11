@@ -1,5 +1,5 @@
 {
-  "name": "waterTheme ",
+  "name": "waterTheme",
   "version": "1.0.0",
   "description": "A water theme using tailwindcss, react, and parcel",
   "homepage": "https://codeChrisM.github.io/waterTheme",
@@ -8,7 +8,7 @@
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
