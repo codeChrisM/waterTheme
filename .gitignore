@@ -30,7 +30,7 @@ Desktop.ini
 
 # Ignore compiled code and build artifacts
 # /build/
-# /dist/
+ /dist/
 # /out/
 
 # Ignore dependency lock files
@@ -42,3 +42,4 @@ composer.lock
 # Ignore parcel cache
 .cache/
 .parcel-cache/
+dist/index.373b410a.js.map
