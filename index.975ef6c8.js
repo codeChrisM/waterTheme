@@ -2912,6 +2912,17 @@ var _appDefault = parcelHelpers.interopDefault(_app);
     lineNumber: 5,
     columnNumber: 17
 }, undefined), document.getElementById("app"));
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if (entry.isIntersecting) entry.target.classList.add("show");
+        else entry.target.classList.remove("show");
+    });
+});
+const sectionElements = document.querySelectorAll("section");
+sectionElements.forEach((el)=>{
+    observer.observe(el);
+    console.log(el);
+});
 
   $parcel$ReactRefreshHelpers$20e5.postlude(module);
 } finally {
@@ -27083,21 +27094,20 @@ var _quiltedImageList = require("./components/QuiltedImageList");
 var _quiltedImageListDefault = parcelHelpers.interopDefault(_quiltedImageList);
 var _s = $RefreshSig$();
 // import "./components/styles/styles.scss";
-const MainHeaderClassName = "";
 const styles = {
     width: "100%"
 };
 const App = ()=>{
     _s();
+    // create an observern  that targets  section entries   and when intersecting adds  class name of show
     const [isMenuVisible, setIsMenuVisible] = (0, _react.useState)(false);
     const toggleMenu = ()=>{
         setIsMenuVisible(!isMenuVisible);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "overflow-hidden",
+        className: "app",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainHeaderDefault.default), {
-                MainHeaderClassName: MainHeaderClassName,
                 toggleMenu: toggleMenu
             }, void 0, false, {
                 fileName: "src/App.js",
@@ -27105,74 +27115,106 @@ const App = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "",
-                className: "wrapper wrapper--body relative",
+                className: " relative",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slideOutComponentDefault.default), {
                         isMenuVis: isMenuVisible
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroVideoDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 36,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        style: styles,
-                        className: "relative rounded-full ",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutUsDefault.default), {}, void 0, false, {
+                        className: "",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _heroVideoDefault.default), {
+                                className: "snap-mandatory snap-center"
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 35,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                style: styles,
+                                className: "relative rounded-full py-30 snap-mandatory snap-center ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutUsDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.js",
+                                    lineNumber: 46,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _waterDropsDefault.default), {}, void 0, false, {
+                                    fileName: "src/App.js",
+                                    lineNumber: 50,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 49,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/App.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 54,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "accordion-wrapper ",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: "font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20",
+                                    children: "Frequently Asked Questions"
+                                }, void 0, false, {
+                                    fileName: "src/App.js",
+                                    lineNumber: 57,
+                                    columnNumber: 13
+                                }, undefined),
+                                (0, _faqDataDefault.default).map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordianItemDefault.default), {
+                                            question: item.question,
+                                            answer: item.answer
+                                        }, index, false, {
+                                            fileName: "src/App.js",
+                                            lineNumber: 62,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/App.js",
+                                        lineNumber: 61,
+                                        columnNumber: 15
+                                    }, undefined))
+                            ]
+                        }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 39,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 38,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _waterDropsDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 41,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _quiltedImageListDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 42,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "accordion-wrapper",
-                        children: (0, _faqDataDefault.default).map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordianItemDefault.default), {
-                                    question: item.question,
-                                    answer: item.answer
-                                }, index, false, {
-                                    fileName: "src/App.js",
-                                    lineNumber: 46,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/App.js",
-                                lineNumber: 45,
-                                columnNumber: 13
-                            }, undefined))
-                    }, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 43,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 56,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 34,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27213,8 +27255,6 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
         setFadeIn(true);
     }, []);
     const fadeInStyle = {
-        opacity: fadeIn ? 1 : 0,
-        transition: "opacity 1500ms linear"
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
@@ -27225,15 +27265,14 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                     className: "text-white text-l ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "primary--purple ",
+                            className: "text-purple-secondary ",
                             children: "Elite"
                         }, void 0, false, {
                             fileName: "src/components/MainHeader.jsx",
                             lineNumber: 19,
                             columnNumber: 11
                         }, this),
-                        " ",
-                        "Splash Pools"
+                        " Splash Pools"
                     ]
                 }, void 0, true, {
                     fileName: "src/components/MainHeader.jsx",
@@ -27243,51 +27282,6 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "icons flex gap-2",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: "",
-                            className: "social",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                width: "34",
-                                height: "34",
-                                viewBox: "0 0 34 34",
-                                fill: "none",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M33.5 16.8152C33.5 25.8207 26.1179 33.1304 17 33.1304C7.88214 33.1304 0.5 25.8207 0.5 16.8152C0.5 7.80971 7.88214 0.5 17 0.5C26.1179 0.5 33.5 7.80971 33.5 16.8152Z",
-                                        fill: "white"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 34,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M17 0.5C7.88214 0.5 0.5 7.80971 0.5 16.8152C0.5 25.8207 7.88214 33.1304 17 33.1304C26.1179 33.1304 33.5 25.8207 33.5 16.8152C33.5 7.80971 26.1179 0.5 17 0.5Z",
-                                        fill: "white"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 38,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M17 0.5C7.88214 0.5 0.5 7.80971 0.5 16.8152C0.5 25.8207 7.88214 33.1304 17 33.1304C26.1179 33.1304 33.5 25.8207 33.5 16.8152C33.5 7.80971 26.1179 0.5 17 0.5Z",
-                                        fill: "white"
-                                    }, void 0, false, {
-                                        fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 42,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/MainHeader.jsx",
-                                lineNumber: 27,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "src/components/MainHeader.jsx",
-                            lineNumber: 25,
-                            columnNumber: 11
-                        }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                             href: "tel:+1234567890",
                             className: "phone",
@@ -27304,7 +27298,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         stroke: "black"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 56,
+                                        lineNumber: 30,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27312,18 +27306,18 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         fill: "black"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 61,
+                                        lineNumber: 35,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/MainHeader.jsx",
-                                lineNumber: 49,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/MainHeader.jsx",
-                            lineNumber: 48,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -27342,7 +27336,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         stroke: "url(#paint0_linear_0_1)"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 75,
+                                        lineNumber: 49,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27351,7 +27345,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         "stroke-width": "2"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 80,
+                                        lineNumber: 54,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27360,7 +27354,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         "stroke-width": "2"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 85,
+                                        lineNumber: 59,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27369,7 +27363,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         "stroke-width": "2"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 90,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
@@ -27378,7 +27372,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                         "stroke-width": "2"
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 95,
+                                        lineNumber: 69,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("defs", {
@@ -27394,7 +27388,7 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                                     "stop-color": "#415EB9"
                                                 }, void 0, false, {
                                                     fileName: "src/components/MainHeader.jsx",
-                                                    lineNumber: 109,
+                                                    lineNumber: 83,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("stop", {
@@ -27402,35 +27396,35 @@ function MainHeader({ MainHeaderClassName , toggleMenu  }) {
                                                     "stop-opacity": "0"
                                                 }, void 0, false, {
                                                     fileName: "src/components/MainHeader.jsx",
-                                                    lineNumber: 110,
+                                                    lineNumber: 84,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/MainHeader.jsx",
-                                            lineNumber: 101,
+                                            lineNumber: 75,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/components/MainHeader.jsx",
-                                        lineNumber: 100,
+                                        lineNumber: 74,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/MainHeader.jsx",
-                                lineNumber: 68,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/MainHeader.jsx",
-                            lineNumber: 67,
+                            lineNumber: 41,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/MainHeader.jsx",
-                    lineNumber: 24,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this)
             ]
@@ -27650,41 +27644,21 @@ const SlideOutComponent = ({ isMenuVis  })=>{
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
                                     xlinkHref: "#slide-out-component-gentle-wave",
                                     x: "48",
-                                    y: "5",
-                                    fill: "rgba(77, 101, 108, 0.5)"
-                                }, void 0, false, {
-                                    fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 24,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
-                                    xlinkHref: "#slide-out-component-gentle-wave",
-                                    x: "48",
                                     y: "3",
-                                    fill: "rgba(113, 132, 201, .5)"
+                                    fill: "rgba(113, 132, 201, 1)"
                                 }, void 0, false, {
                                     fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
-                                    xlinkHref: "#slide-out-component-gentle-wave",
-                                    x: "48",
-                                    y: "0",
-                                    fill: "rgba(166, 178, 222, .3)"
-                                }, void 0, false, {
-                                    fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 36,
+                                    lineNumber: 31,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
                                     xlinkHref: "#slide-out-component-gentle-wave",
                                     x: "48",
                                     y: "7",
-                                    fill: "#000"
+                                    fill: "#1A1f24"
                                 }, void 0, false, {
                                     fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 42,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, undefined)
                             ]
@@ -27708,18 +27682,18 @@ const SlideOutComponent = ({ isMenuVis  })=>{
                 className: "container--menu",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "ball",
+                        className: "ball bg-blue",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "text",
                             children: "Menu"
                         }, void 0, false, {
                             fileName: "src/components/SlideOutComponent.jsx",
-                            lineNumber: 55,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/SlideOutComponent.jsx",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27738,12 +27712,12 @@ const SlideOutComponent = ({ isMenuVis  })=>{
                                         d: "M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
                                     }, void 0, false, {
                                         fileName: "src/components/SlideOutComponent.jsx",
-                                        lineNumber: 69,
+                                        lineNumber: 70,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 68,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("g", {
@@ -27753,68 +27727,48 @@ const SlideOutComponent = ({ isMenuVis  })=>{
                                             xlinkHref: "#slide-out-component-gentle-wave",
                                             x: "48",
                                             y: "5",
-                                            fill: "rgba(77, 101, 108, 1)"
-                                        }, void 0, false, {
-                                            fileName: "src/components/SlideOutComponent.jsx",
-                                            lineNumber: 75,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
-                                            xlinkHref: "#slide-out-component-gentle-wave",
-                                            x: "48",
-                                            y: "3",
                                             fill: "rgba(113, 132, 201, 1)"
                                         }, void 0, false, {
                                             fileName: "src/components/SlideOutComponent.jsx",
-                                            lineNumber: 81,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
-                                            xlinkHref: "#slide-out-component-gentle-wave",
-                                            x: "48",
-                                            y: "0",
-                                            fill: "rgba(166, 178, 222, 1)"
-                                        }, void 0, false, {
-                                            fileName: "src/components/SlideOutComponent.jsx",
-                                            lineNumber: 87,
+                                            lineNumber: 76,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("use", {
                                             xlinkHref: "#slide-out-component-gentle-wave",
                                             x: "48",
                                             y: "7",
-                                            fill: "#000"
+                                            fill: "#1A1f24"
                                         }, void 0, false, {
                                             fileName: "src/components/SlideOutComponent.jsx",
-                                            lineNumber: 93,
+                                            lineNumber: 94,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/SlideOutComponent.jsx",
-                                    lineNumber: 74,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/SlideOutComponent.jsx",
-                            lineNumber: 60,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/SlideOutComponent.jsx",
-                        lineNumber: 59,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slideOutContentDefault.default), {}, void 0, false, {
                         fileName: "src/components/SlideOutComponent.jsx",
-                        lineNumber: 105,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/SlideOutComponent.jsx",
-                lineNumber: 53,
+                lineNumber: 54,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27848,7 +27802,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 function SlideOut__Content() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "content",
+        className: "content overflow-hidden",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
             className: "menu",
             children: [
@@ -27856,7 +27810,7 @@ function SlideOut__Content() {
                     children: [
                         " ",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            className: "btn btn--blue",
+                            className: "btn rounded-full",
                             href: "www.calendly.com",
                             children: "Check Availability"
                         }, void 0, false, {
@@ -27874,7 +27828,7 @@ function SlideOut__Content() {
                     children: [
                         " ",
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            className: "btn",
+                            className: "btn rounded-lg",
                             href: "www.calendly.com",
                             children: "Book Appointment"
                         }, void 0, false, {
@@ -27950,10 +27904,7 @@ let AnimationStyles = {
 };
 function WaterDrops() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        style: {
-            backgroundColor: "#415eb9"
-        },
-        className: "text-white rounded-3xl rounded-e-full border-gray-300 bg-opacity-70 border-y-4 ",
+        className: "text-white bg-purple rounded-3xl rounded-e-full border-black bg-opacity-90 border-y-4 ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
             className: "cards",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27967,7 +27918,7 @@ function WaterDrops() {
                                 children: "The Elite Difference"
                             }, void 0, false, {
                                 fileName: "src/components/WaterDrops.jsx",
-                                lineNumber: 18,
+                                lineNumber: 15,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27975,22 +27926,22 @@ function WaterDrops() {
                                 children: "Learn about the Elite stands out vs the competitors"
                             }, void 0, false, {
                                 fileName: "src/components/WaterDrops.jsx",
-                                lineNumber: 19,
+                                lineNumber: 16,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 style: AnimationStyles,
-                                className: "bg-gray-900 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded ",
-                                children: "Hover me"
+                                className: "btn p-4 rounded-lg bg-black",
+                                children: "Reach Out Today!"
                             }, void 0, false, {
                                 fileName: "src/components/WaterDrops.jsx",
-                                lineNumber: 22,
+                                lineNumber: 19,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/WaterDrops.jsx",
-                        lineNumber: 17,
+                        lineNumber: 14,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27999,23 +27950,23 @@ function WaterDrops() {
                             children: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptate sit unde ipsa et voluptatem sapiente, distinctio eligendi? Perferendis molestiae ipsam ullam delectus hic ipsum sed voluptatum aliquid laudantium at!"
                         }, void 0, false, {
                             fileName: "src/components/WaterDrops.jsx",
-                            lineNumber: 30,
+                            lineNumber: 27,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/WaterDrops.jsx",
-                        lineNumber: 29,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/WaterDrops.jsx",
-                lineNumber: 16,
+                lineNumber: 13,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/components/WaterDrops.jsx",
-            lineNumber: 15,
+            lineNumber: 12,
             columnNumber: 7
         }, this)
     }, void 0, false, {
@@ -28059,7 +28010,8 @@ function HeroVideo() {
         height: "800px",
         backgroundSize: "cover",
         position: "absolute",
-        mixBlendMode: "screen"
+        mixBlendMode: "screen",
+        "border-radius": "50%"
     };
     (0, _react.useEffect)(()=>{
         setIntro("intro");
@@ -28067,65 +28019,65 @@ function HeroVideo() {
         intro
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-        className: "hero",
+        className: "hero overflow-hidden ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: combinedClassName,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "vid-info",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                    className: "vid-info__name",
-                                    children: "Welcome to"
-                                }, void 0, false, {
-                                    fileName: "src/components/HeroVideo.jsx",
-                                    lineNumber: 29,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "vid-info__alias",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            className: "primary--purple",
-                                            children: "Elite"
-                                        }, void 0, false, {
-                                            fileName: "src/components/HeroVideo.jsx",
-                                            lineNumber: 31,
-                                            columnNumber: 15
-                                        }, this),
-                                        " Splash Pools"
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/HeroVideo.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    className: "vid-info__summary text-white",
-                                    children: "Elite Designs & Pool Installations"
-                                }, void 0, false, {
-                                    fileName: "src/components/HeroVideo.jsx",
-                                    lineNumber: 33,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
+                            className: "vid-info bg-gold p-4 bg-gold rounded-ee-full bg-opacity-60 text-black",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "vid-info__name text-2xl",
+                                children: [
+                                    "Welcome to",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "vid-info__alias text-white mx-1 ",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                                className: "font-bold text-purple ",
+                                                children: "Elite"
+                                            }, void 0, false, {
+                                                fileName: "src/components/HeroVideo.jsx",
+                                                lineNumber: 33,
+                                                columnNumber: 17
+                                            }, this),
+                                            " Splash Pools"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/HeroVideo.jsx",
+                                        lineNumber: 32,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "vid-info__summary block",
+                                        children: "Elite Designs & Pool Installations"
+                                    }, void 0, false, {
+                                        fileName: "src/components/HeroVideo.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/HeroVideo.jsx",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
                             fileName: "src/components/HeroVideo.jsx",
-                            lineNumber: 28,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/HeroVideo.jsx",
-                        lineNumber: 27,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "top"
                     }, void 0, false, {
                         fileName: "src/components/HeroVideo.jsx",
-                        lineNumber: 38,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28137,18 +28089,18 @@ function HeroVideo() {
                             width: "100%"
                         }, void 0, false, {
                             fileName: "src/components/HeroVideo.jsx",
-                            lineNumber: 41,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/HeroVideo.jsx",
-                        lineNumber: 40,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/HeroVideo.jsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28156,13 +28108,13 @@ function HeroVideo() {
                 className: "blue"
             }, void 0, false, {
                 fileName: "src/components/HeroVideo.jsx",
-                lineNumber: 50,
+                lineNumber: 57,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/HeroVideo.jsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -28219,7 +28171,7 @@ let combinedStyles = {
 const AboutUs = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         style: combinedStyles,
-        className: "my-4 bg-purple-950 pt-56 pr-6 pl-3 pb-6 relative border-r-8 ",
+        className: "my-4 pt-56 pr-6 pl-3 pb-6 relative border-r-8 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 style: styles__FloatAnimation_B,
@@ -28279,18 +28231,8 @@ var _expandMore = require("@mui/icons-material/ExpandMore");
 var _expandMoreDefault = parcelHelpers.interopDefault(_expandMore);
 const AccordionItem = ({ question , answer  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordionDefault.default), {
-        style: {
-            backgroundColor: "100%"
-        },
-        ClassName: "accordion",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordionSummaryDefault.default), {
-                style: {
-                    backgroundColor: "#eff",
-                    color: "black",
-                    borderBottom: "1px solid white"
-                },
-                className: "accordionSummary ",
                 expandIcon: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _expandMoreDefault.default), {}, void 0, false, void 0, void 0),
                 "aria-controls": "panel-content",
                 id: "panel-header",
@@ -28298,7 +28240,7 @@ const AccordionItem = ({ question , answer  })=>{
                     children: question
                 }, void 0, false, {
                     fileName: "src/components/AccordianItem.js",
-                    lineNumber: 22,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
@@ -28309,20 +28251,19 @@ const AccordionItem = ({ question , answer  })=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordionDetailsDefault.default), {
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _typographyDefault.default), {
                     style: {
-                        borderTop: "1px solid gray",
-                        padding: "1em",
-                        backgroundColor: "#edefef",
-                        borderRadius: "10%"
+                        borderTop: "1px solid black",
+                        // padding: " 1em 0",
+                        backgroundColor: "white"
                     },
                     children: answer
                 }, void 0, false, {
                     fileName: "src/components/AccordianItem.js",
-                    lineNumber: 25,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/AccordianItem.js",
-                lineNumber: 24,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined)
         ]
@@ -42357,7 +42298,7 @@ function Footer() {
         return new Date().getFullYear();
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "footer bg-black p-3",
+        className: "footer bg-black p-3 mt-10",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
             className: "text-white text-center w-full",
             children: [
