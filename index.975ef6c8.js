@@ -27092,6 +27092,8 @@ var _faqData = require("./data/faqData");
 var _faqDataDefault = parcelHelpers.interopDefault(_faqData);
 var _quiltedImageList = require("./components/QuiltedImageList");
 var _quiltedImageListDefault = parcelHelpers.interopDefault(_quiltedImageList);
+var _contactUs = require("./components/ContactUs");
+var _contactUsDefault = parcelHelpers.interopDefault(_contactUs);
 var _s = $RefreshSig$();
 // import "./components/styles/styles.scss";
 const styles = {
@@ -27111,7 +27113,7 @@ const App = ()=>{
                 toggleMenu: toggleMenu
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27121,7 +27123,7 @@ const App = ()=>{
                         isMenuVis: isMenuVisible
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27131,7 +27133,7 @@ const App = ()=>{
                                 className: "snap-mandatory snap-center"
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 35,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27139,34 +27141,40 @@ const App = ()=>{
                                 className: "relative rounded-full py-30 snap-mandatory snap-center ",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutUsDefault.default), {}, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 46,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _waterDropsDefault.default), {}, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 50,
+                                    lineNumber: 51,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/App.js",
-                                lineNumber: 49,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/App.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _quiltedImageListDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 56,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 54,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27178,7 +27186,7 @@ const App = ()=>{
                                     children: "Frequently Asked Questions"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 57,
+                                    lineNumber: 60,
                                     columnNumber: 13
                                 }, undefined),
                                 (0, _faqDataDefault.default).map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27187,40 +27195,52 @@ const App = ()=>{
                                             answer: item.answer
                                         }, index, false, {
                                             fileName: "src/App.js",
-                                            lineNumber: 62,
+                                            lineNumber: 65,
                                             columnNumber: 17
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/App.js",
-                                        lineNumber: 61,
+                                        lineNumber: 64,
                                         columnNumber: 15
                                     }, undefined))
                             ]
                         }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 56,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 55,
+                        lineNumber: 58,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "contact-us-Wrapper my-10",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactUsDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 75,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 74,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 72,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
@@ -27235,7 +27255,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/MainHeader":"avnx3","./components/SlideOutComponent":"1Y29w","./components/WaterDrops":"lvozP","./components/HeroVideo":"fVHkr","./components/AboutUs":"gjRni","./components/AccordianItem":"epo9K","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./data/faqData":"xefO6","./components/QuiltedImageList":"5HYcq"}],"avnx3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/MainHeader":"avnx3","./components/SlideOutComponent":"1Y29w","./components/WaterDrops":"lvozP","./components/HeroVideo":"fVHkr","./components/AboutUs":"gjRni","./components/AccordianItem":"epo9K","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./data/faqData":"xefO6","./components/QuiltedImageList":"5HYcq","./components/ContactUs":"cMp5C"}],"avnx3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0703 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28026,7 +28046,7 @@ function HeroVideo() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "vid-info bg-gold p-4 bg-gold rounded-ee-full bg-opacity-60 text-black",
+                            className: "vid-info bg-gold p-4 rounded-ee-full bg-opacity-60 text-black",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                                 className: "vid-info__name text-2xl",
                                 children: [
@@ -42458,8 +42478,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 function QuiltedImageList() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageListDefault.default), {
         sx: {
-            width: 500,
-            height: 450
+            maxheight: 450
         },
         variant: "quilted",
         cols: 4,
@@ -42491,60 +42510,60 @@ exports.default = QuiltedImageList;
 _c = QuiltedImageList;
 const itemData = [
     {
-        img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Breakfast",
         rows: 2,
         cols: 2
     },
     {
-        img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-cove-evening-sky-1-800x600.jpg    ",
         title: "Burger"
     },
     {
-        img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Camera"
     },
     {
-        img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Coffee",
         cols: 2
     },
     {
-        img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Hats",
         cols: 2
     },
     {
-        img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Honey",
         author: "@arwinneil",
         rows: 2,
         cols: 2
     },
     {
-        img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Basketball"
     },
     {
-        img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Fern"
     },
     {
-        img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Mushrooms",
         rows: 2,
         cols: 2
     },
     {
-        img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Tomato basil"
     },
     {
-        img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Sea star"
     },
     {
-        img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+        img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
         title: "Bike",
         cols: 2
     }, 
@@ -42985,6 +43004,107 @@ const imageListItemClasses = (0, _utils.unstable_generateUtilityClasses)("MuiIma
 ]);
 exports.default = imageListItemClasses;
 
-},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire9656")
+},{"@mui/utils":"cttLn","../generateUtilityClass":"gzKc1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cMp5C":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3481 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3481.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactIframe = require("react-iframe");
+var _reactIframeDefault = parcelHelpers.interopDefault(_reactIframe);
+const JotFormIframe = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactIframeDefault.default), {
+        url: "https://form.jotform.com/232114601026136",
+        id: "JotFormIFrame-232114601026136",
+        title: "Lime Theme Contact Us Form",
+        allowTransparency: true,
+        allowFullScreen: true,
+        width: "100%",
+        height: "639px",
+        overflow: "hidden"
+    }, void 0, false, {
+        fileName: "src/components/ContactUs.jsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_c = JotFormIframe;
+exports.default = JotFormIframe;
+var _c;
+$RefreshReg$(_c, "JotFormIframe");
+
+  $parcel$ReactRefreshHelpers$3481.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-iframe":"W9pQy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"W9pQy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _objectAssign = require("object-assign");
+var _objectAssignDefault = parcelHelpers.interopDefault(_objectAssign);
+const Iframe = ({ url , allowFullScreen , position , display , height , width , overflow , styles , onLoad , onMouseOver , onMouseOut , scrolling , id , frameBorder , ariaHidden , sandbox , allow , className , title , ariaLabel , ariaLabelledby , name , target , loading , importance , referrerpolicy , allowpaymentrequest , src , key  })=>{
+    const defaultProps = (0, _objectAssignDefault.default)({
+        src: src || url,
+        target: target || null,
+        style: {
+            position: position || null,
+            display: display || "initial",
+            overflow: overflow || null
+        },
+        scrolling: scrolling || null,
+        allowpaymentrequest: allowpaymentrequest || null,
+        importance: importance || null,
+        sandbox: sandbox && [
+            ...sandbox
+        ].join(" ") || null,
+        loading: loading || null,
+        styles: styles || null,
+        name: name || null,
+        className: className || null,
+        allowFullScreen: "allowFullScreen",
+        referrerpolicy: referrerpolicy || null,
+        title: title || null,
+        allow: allow || null,
+        id: id || null,
+        "aria-labelledby": ariaLabelledby || null,
+        "aria-hidden": ariaHidden || null,
+        "aria-label": ariaLabel || null,
+        width: width || null,
+        height: height || null,
+        onLoad: onLoad || null,
+        onMouseOver: onMouseOver || null,
+        onMouseOut: onMouseOut || null,
+        key: key || "iframe"
+    });
+    let props = Object.create(null);
+    for (let prop of Object.keys(defaultProps))if (defaultProps[prop] != null) props[prop] = defaultProps[prop];
+    for (let i of Object.keys(props.style))if (props.style[i] == null) delete props.style[i];
+    if (props.styles) for (let key1 of Object.keys(props.styles)){
+        if (props.styles.hasOwnProperty(key1)) props.style[key1] = props.styles[key1];
+        if (Object.keys(props.styles).pop() == key1) delete props.styles;
+    }
+    if (allowFullScreen) {
+        if ("allow" in props) {
+            const currentAllow = props.allow.replace("fullscreen", "");
+            props.allow = `fullscreen ${currentAllow.trim()}`.trim();
+        } else props.allow = "fullscreen";
+    }
+    if (frameBorder >= 0) {
+        if (!props.style.hasOwnProperty("border")) props.style.border = frameBorder;
+    }
+    return (0, _reactDefault.default).createElement("iframe", Object.assign({}, props));
+};
+exports.default = Iframe;
+
+},{"react":"21dqq","object-assign":"7OXxh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire9656")
 
 //# sourceMappingURL=index.975ef6c8.js.map
