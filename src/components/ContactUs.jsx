@@ -9,9 +9,9 @@ const JotFormIframe = () => {
       title="Lime Theme Contact Us Form"
       allowTransparency
       allowFullScreen
-      allow="geolocation; microphone; camera"
       width="100%"
-      height="539px"
+      height="639px"
+      overflow="hidden"
     />
   );
 };

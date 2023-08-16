@@ -26,7 +26,7 @@ export default function HeroVideo() {
     <section className="hero overflow-hidden ">
       <div className={combinedClassName}>
         <div>
-          <div className="vid-info bg-gold p-4 bg-gold rounded-ee-full   bg-opacity-60 text-black">
+          <div className="vid-info bg-gold p-4  rounded-ee-full   bg-opacity-60 text-black">
             <h1 className="vid-info__name text-2xl">
               Welcome to
               <span className="vid-info__alias text-white mx-1  ">

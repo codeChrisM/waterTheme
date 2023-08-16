@@ -10,6 +10,7 @@ import AccordionItem from "./components/AccordianItem";
 import Footer from "./components/Footer";
 import faqData from "./data/faqData";
 import QuiltedImageList from "./components/QuiltedImageList";
+import ContactUs from "./components/ContactUs";
 // import "./components/styles/styles.scss";
 
 const styles = {
@@ -51,7 +52,9 @@ const App = () => {
           </div>
         </div>
 
-        <div>{/* <QuiltedImageList /> */}</div>
+        <div>
+          <QuiltedImageList />
+        </div>
         <div>
           <div className="accordion-wrapper ">
             <h2 className="font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20">
@@ -67,6 +70,9 @@ const App = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="contact-us-Wrapper my-10">
+          <ContactUs />
         </div>
 
         <Footer />
