@@ -2,17 +2,17 @@ import React from "react";
 
 function SlideOut__Content() {
   return (
-    <div className="content">
+    <div className="content overflow-hidden">
       <ul className="menu">
         <li>
           {" "}
-          <a className="btn btn--blue" href="www.calendly.com">
+          <a className="btn rounded-full" href="www.calendly.com">
             Check Availability
           </a>
         </li>
         <li>
           {" "}
-          <a className="btn" href="www.calendly.com">
+          <a className="btn rounded-lg" href="www.calendly.com">
             Book Appointment
           </a>
         </li>

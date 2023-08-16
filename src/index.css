@@ -9,8 +9,42 @@ body {
 }
 
 body {
-  background-color: #2596be;
+  overflow: hidden;
+  background-color: #CFBA98;
   margin: 0;
+  position: relative;
+}
+
+.app::before {
+  background-image: url("./img/WaterIcon.png");
+  background-repeat: repeat;
+  background-size: 500px;
+  background-color: #CFBA98;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  transform: rotate(30deg);
+}
+
+.app::after {
+  background-image: url("./img/WaterIcon.png");
+  background-color: #CFBA98;
+  background-repeat: repeat;
+  background-size: 500px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  opacity: .5;
+  transform: rotate(30deg);
+  filter: blur(2em);
 }
 
 header {
@@ -365,28 +399,29 @@ li {
   position: absolute;
   top: 20em;
   left: 11vw;
-  color: #fff;
+  /* color: #fff; */
   z-index: 5;
 }
 
 .vid-info__name {
-  font-size: 1.5em;
+  /* color: #CFBA98; */
+  /* font-size: 1.5em; */
 }
 
 .vid-info__alias {
   /* color: rgba(#AB1795, 0.75); */
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin: 0;
-  text-shadow: 3px 3px 5px #000;
+  /* font-size: 2.75rem; */
+  /* font-weight: 700; */
+  /* margin: 0; */
+  /* text-shadow: -1em 1em 0em #1A1F24; */
 }
 
 .vid-info__summary {
-  background-color: rgba(19, 56, 159, 0.7);
-  padding: 0.5em 1em;
-  border-radius: 10px;
-  width: auto;
-  display: inline-block;
+  /* background-color: rgba(19, 56, 159, 0.7); */
+  /* padding: 0.5em 1em; */
+  /* border-radius: 10px; */
+  /* width: auto; */
+  /* display: inline-block; */
 }
 
 /*---prob have to be injected with script--*/
@@ -448,15 +483,16 @@ iframe .vid-info {
 
 .top::before {
   content: "";
+  /* transform: rotate(10deg); */
   width: 90%;
   height: 800px;
   position: absolute;
   z-index: 999;
-  background: #1A1F24;
-  animation: spin 15s ease-in-out infinite;
+  background: black;
+  animation: spin 5s ease-in-out infinite;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .top::before {
     min-width: 1000px;
   }
@@ -464,34 +500,27 @@ iframe .vid-info {
 
 
 
+
+
+
+
+
+
 /* # Animation key frames to rotate .top::before 360 degrees over 25s */
 @keyframes spin {
   0% {
     transform: rotate(10deg);
-    /* height: 400px; */
-    width: 400px;
-    border-radius: 50px;
-  }
-
-  30% {
-    /* transform: rotate(15deg); */
-    /* height: 450px; */
-    /* width: 400px; */
-    /* border-radius: 10px; */
+    border-radius: 50%;
   }
 
   70% {
     transform: rotate(15deg);
-    /* height: 450px; */
-    /* width: 450px; */
-    /* border-radius: 50px; */
+    border-radius: 100%;
   }
 
   100% {
     transform: rotate(10deg);
-    /* height: 400px; */
-    width: 400px;
-    border-radius: 50px;
+    border-radius: 50%;
   }
 
 }

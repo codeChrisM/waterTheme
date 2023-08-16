@@ -24,17 +24,17 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="app">
       <MainHeader toggleMenu={toggleMenu} />
       <div className=" relative">
         <SlideOutComponent isMenuVis={isMenuVisible} />
         <HeroVideo />
 
         <div style={styles} className="relative rounded-full ">
-          {/* <AboutUs /> */}
+          <AboutUs />
         </div>
-        {/* <WaterDrops />
-        <QuiltedImageList />
+        <WaterDrops />
+        {/* <QuiltedImageList /> */}
         <div className="accordion-wrapper">
           {faqData.map((item, index) => (
             <div>
@@ -45,11 +45,11 @@ const App = () => {
               />
             </div>
           ))}
-        </div> */}
+        </div>
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

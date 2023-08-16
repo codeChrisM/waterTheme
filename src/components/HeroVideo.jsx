@@ -25,14 +25,20 @@ export default function HeroVideo() {
     <section className="hero overflow-hidden ">
       <div className={combinedClassName}>
         <div>
-          <div className="vid-info">
-            <h1 className="vid-info__name">Welcome to</h1>
-            <h2 className="vid-info__alias">
-              <span className="text-purple-secondary">Elite</span> Splash Pools
-            </h2>
-            <p className="vid-info__summary text-white">
-              Elite Designs & Pool Installations
-            </p>
+          <div className="vid-info bg-gold p-4 bg-gold rounded-ee-full   bg-opacity-60 text-black">
+            <h1 className="vid-info__name text-2xl">
+              Welcome to
+              <span className="vid-info__alias text-white mx-1  ">
+                <span className="font-bold text-purple ">Elite</span> Splash
+                Pools
+              </span>
+              <span
+                className="vid-info__summary
+              block"
+              >
+                Elite Designs & Pool Installations
+              </span>
+            </h1>
           </div>
         </div>
         <div className="top"></div>

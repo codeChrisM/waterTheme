@@ -3,7 +3,7 @@ import SlideOut__Content from "./SlideOut__Content";
 
 const SlideOutComponent = ({ isMenuVis }) => {
   return (
-    <div className={`component--slide-out ${isMenuVis ? "show" : "show"} `}>
+    <div className={`component--slide-out ${isMenuVis ? "show" : ""} `}>
       {/* Waves Container */}
       <div className="container--top">
         <svg
@@ -52,7 +52,7 @@ const SlideOutComponent = ({ isMenuVis }) => {
       {/* Waves end */}
 
       <div className="container--menu">
-        <div className="ball">
+        <div className="ball bg-blue">
           <div className="text">Menu</div>
         </div>
 

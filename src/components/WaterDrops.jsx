@@ -8,10 +8,7 @@ let AnimationStyles = {
 
 function WaterDrops() {
   return (
-    <div
-      style={{ backgroundColor: "#415eb9" }}
-      className="text-white rounded-3xl rounded-e-full border-gray-300 bg-opacity-70  border-y-4 "
-    >
+    <div className="text-white bg-purple rounded-3xl rounded-e-full border-black bg-opacity-90  border-y-4 ">
       <section className="cards">
         <div className="container flex md:mx-8 flex-wrap m-auto ">
           <div class="drop  ">
