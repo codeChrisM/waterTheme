@@ -8,18 +8,15 @@ function MainHeader({ MainHeaderClassName, toggleMenu }) {
   }, []);
 
   const fadeInStyle = {
-    opacity: fadeIn ? 1 : 0,
-    transition: "opacity 1500ms linear",
+    // opacity: fadeIn ? 1 : 0,
+    // transition: "opacity 1500ms linear",
   };
 
   return (
     <>
       <header style={fadeInStyle} className="w-full border-b-2">
         <div className="text-white text-l ">
-          <span className="primary--purple ">
-            Elite
-          </span>{" "}
-          Splash Pools
+          <span className="text-purple-secondary ">Elite</span> Splash Pools
         </div>
         <div className="icons flex gap-2">
           <a href="" className="social">

@@ -12,8 +12,6 @@ import faqData from "./data/faqData";
 import QuiltedImageList from "./components/QuiltedImageList";
 // import "./components/styles/styles.scss";
 
-const MainHeaderClassName = "";
-
 const styles = {
   width: "100%",
   // height: "340px",
@@ -26,19 +24,16 @@ const App = () => {
   };
 
   return (
-    <div className="overflow-hidden">
-      <MainHeader
-        MainHeaderClassName={MainHeaderClassName}
-        toggleMenu={toggleMenu}
-      />
-      <div id="" className="wrapper wrapper--body  relative">
+    <>
+      <MainHeader toggleMenu={toggleMenu} />
+      <div className=" relative">
         <SlideOutComponent isMenuVis={isMenuVisible} />
         <HeroVideo />
 
         <div style={styles} className="relative rounded-full ">
-          <AboutUs />
+          {/* <AboutUs /> */}
         </div>
-        <WaterDrops />
+        {/* <WaterDrops />
         <QuiltedImageList />
         <div className="accordion-wrapper">
           {faqData.map((item, index) => (
@@ -50,12 +45,11 @@ const App = () => {
               />
             </div>
           ))}
-        </div>
-      
+        </div> */}
 
         <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
