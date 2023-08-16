@@ -2,7 +2,7 @@
   "name": "waterTheme",
   "version": "1.0.0",
   "description": "A water theme using tailwindcss, react, and parcel",
-  "homepage": "https://codeChrisM.github.io/waterTheme",
+  "homepage": "https://codechrism.github.io/waterTheme/",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel src/index.html",
