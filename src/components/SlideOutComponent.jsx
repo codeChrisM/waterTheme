@@ -3,7 +3,7 @@ import SlideOut__Content from "./SlideOut__Content";
 
 const SlideOutComponent = ({ isMenuVis }) => {
   return (
-    <div className={`component--slide-out ${isMenuVis ? "show" : ""} `}>
+    <div className={`component--slide-out ${isMenuVis ? "show" : "show"} `}>
       {/* Waves Container */}
       <div className="container--top">
         <svg
@@ -21,29 +21,30 @@ const SlideOutComponent = ({ isMenuVis }) => {
             />
           </defs>
           <g className="parallax">
-            <use
+            {/* <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="5"
-              fill="rgba(77, 101, 108, 0.5)"
-            />
+              fill="rgba(26, 31, 36, 0.5)"
+            /> */}
+
             <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="3"
-              fill="rgba(113, 132, 201, .5)"
+              fill="rgba(113, 132, 201, 1)"
             />
-            <use
+            {/* <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="0"
-              fill="rgba(166, 178, 222, .3)"
-            />
+              fill="rgba(26, 31, 36, .3)"
+            /> */}
             <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="7"
-              fill="#000"
+              fill="#1A1f24"
             />
           </g>
         </svg>
@@ -76,25 +77,25 @@ const SlideOutComponent = ({ isMenuVis }) => {
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="5"
-                fill="rgba(77, 101, 108, 1)"
+                fill="rgba(113, 132, 201, 1)"
               />
-              <use
+              {/* <use
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="3"
                 fill="rgba(113, 132, 201, 1)"
-              />
-              <use
+              /> */}
+              {/* <use
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="0"
-                fill="rgba(166, 178, 222, 1)"
-              />
+                fill="rgba(113, 132, 201, 1)"
+              /> */}
               <use
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="7"
-                fill="#000"
+                fill="#1A1f24"
               />
             </g>
           </svg>

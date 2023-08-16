@@ -204,6 +204,7 @@ h1 {
 
 .component--slide-out::after {
   content: "";
+
   background-color: #1A1F24;
   position: absolute;
   top: 0;

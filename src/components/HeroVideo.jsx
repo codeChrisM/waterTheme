@@ -22,13 +22,13 @@ export default function HeroVideo() {
   }, [intro]);
 
   return (
-    <section className="hero">
+    <section className="hero overflow-hidden ">
       <div className={combinedClassName}>
-        <div >
+        <div>
           <div className="vid-info">
             <h1 className="vid-info__name">Welcome to</h1>
             <h2 className="vid-info__alias">
-              <span className="primary--purple">Elite</span> Splash Pools
+              <span className="text-purple-secondary">Elite</span> Splash Pools
             </h2>
             <p className="vid-info__summary text-white">
               Elite Designs & Pool Installations
