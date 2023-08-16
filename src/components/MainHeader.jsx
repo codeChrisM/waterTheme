@@ -19,29 +19,6 @@ function MainHeader({ MainHeaderClassName, toggleMenu }) {
           <span className="text-purple-secondary ">Elite</span> Splash Pools
         </div>
         <div className="icons flex gap-2">
-          <a href="" className="social">
-            {/* social media icon */}
-            <svg
-              width="34"
-              height="34"
-              viewBox="0 0 34 34"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M33.5 16.8152C33.5 25.8207 26.1179 33.1304 17 33.1304C7.88214 33.1304 0.5 25.8207 0.5 16.8152C0.5 7.80971 7.88214 0.5 17 0.5C26.1179 0.5 33.5 7.80971 33.5 16.8152Z"
-                fill="white"
-              />
-              <path
-                d="M17 0.5C7.88214 0.5 0.5 7.80971 0.5 16.8152C0.5 25.8207 7.88214 33.1304 17 33.1304C26.1179 33.1304 33.5 25.8207 33.5 16.8152C33.5 7.80971 26.1179 0.5 17 0.5Z"
-                fill="white"
-              />
-              <path
-                d="M17 0.5C7.88214 0.5 0.5 7.80971 0.5 16.8152C0.5 25.8207 7.88214 33.1304 17 33.1304C26.1179 33.1304 33.5 25.8207 33.5 16.8152C33.5 7.80971 26.1179 0.5 17 0.5Z"
-                fill="white"
-              />
-            </svg>
-          </a>
           <a href="tel:+1234567890" className="phone">
             <svg
               width="34"

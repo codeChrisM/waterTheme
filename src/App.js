@@ -18,6 +18,8 @@ const styles = {
 };
 
 const App = () => {
+  // create an observern  that targets  section entries   and when intersecting adds  class name of show
+
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
@@ -28,23 +30,43 @@ const App = () => {
       <MainHeader toggleMenu={toggleMenu} />
       <div className=" relative">
         <SlideOutComponent isMenuVis={isMenuVisible} />
-        <HeroVideo />
 
-        <div style={styles} className="relative rounded-full ">
-          <AboutUs />
+        <div className="">
+          <HeroVideo className="snap-mandatory snap-center" />
+          {/* <div class="scroll-container">
+          <div class="scroll-area">1</div>
+          <div class="scroll-area">2</div>
+          <div class="scroll-area">3</div>
+          <div class="scroll-area">4</div>
+        </div> */}
+          <div
+            style={styles}
+            className="relative rounded-full  py-30 snap-mandatory snap-center  "
+          >
+            <AboutUs />
+          </div>
+
+          <div>
+            <WaterDrops />
+          </div>
         </div>
-        <WaterDrops />
-        {/* <QuiltedImageList /> */}
-        <div className="accordion-wrapper">
-          {faqData.map((item, index) => (
-            <div>
-              <AccordionItem
-                key={index}
-                question={item.question}
-                answer={item.answer}
-              />
-            </div>
-          ))}
+
+        <div>{/* <QuiltedImageList /> */}</div>
+        <div>
+          <div className="accordion-wrapper ">
+            <h2 className="font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20">
+              Frequently Asked Questions
+            </h2>
+            {faqData.map((item, index) => (
+              <div>
+                <AccordionItem
+                  key={index}
+                  question={item.question}
+                  answer={item.answer}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <Footer />

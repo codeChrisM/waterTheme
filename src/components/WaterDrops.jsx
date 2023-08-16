@@ -18,9 +18,9 @@ function WaterDrops() {
             </p>
             <button
               style={AnimationStyles}
-              className="bg-gray-900 hover:bg-purple-600  text-white font-bold py-2 px-4 rounded "
+              className="btn p-4 rounded-lg bg-black"
             >
-              Hover me
+              Reach Out Today!
             </button>
           </div>
           <div className="description text-white  bg-black m-6 flex p-4 self-center rounded-xl ">

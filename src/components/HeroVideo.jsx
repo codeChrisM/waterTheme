@@ -15,6 +15,7 @@ export default function HeroVideo() {
     backgroundSize: "cover",
     position: "absolute",
     mixBlendMode: "screen",
+    "border-radius": "50%",
   };
 
   useEffect(() => {

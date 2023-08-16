@@ -7,14 +7,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const AccordionItem = ({ question, answer }) => {
   return (
-    <Accordion style={{ backgroundColor: "100%" }} ClassName="accordion">
+    <Accordion>
       <AccordionSummary
-        style={{
-          backgroundColor: "#eff",
-          color: "black",
-          borderBottom: "1px solid white",
-        }}
-        className="accordionSummary "
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel-content"
         id="panel-header"
@@ -24,10 +18,10 @@ const AccordionItem = ({ question, answer }) => {
       <AccordionDetails>
         <Typography
           style={{
-            borderTop: "1px solid gray",
-            padding: "1em",
-            backgroundColor: "#edefef",
-            borderRadius: "10%",
+            borderTop: "1px solid black",
+            // padding: " 1em 0",
+            backgroundColor: "white",
+            // borderRadius: "10%",
           }}
         >
           {answer}

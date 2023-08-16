@@ -6,10 +6,11 @@ function Footer() {
   };
 
   return (
-    <div className="footer bg-black p-3">
+    <div className="footer bg-black p-3 mt-10">
       {/* year and copyright text */}
-      <p className="text-white text-center w-full">© {grabTheDate()} Elite Splash Pools. All rights reserved.</p>
-
+      <p className="text-white text-center w-full">
+        © {grabTheDate()} Elite Splash Pools. All rights reserved.
+      </p>
     </div>
   );
 }
