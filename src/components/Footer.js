@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-  grabTheDate = () => {
+  const grabTheDate = () => {
     return new Date().getFullYear();
   };
 
