@@ -1,6 +1,7 @@
 // components/AboutUs.js
-
 import React from "react";
+import AccordionItem from "./AccordianItem";
+import whyUsData from "../data/whyUsData";
 // import "./styles/styles.scss";
 
 const styles = {
@@ -26,32 +27,57 @@ const styles__FloatAnimation_C = {
   animationDirection: "alternate",
 };
 
+let transitionAll = {
+  transition: "all 1s ease",
+};
+
 let combinedStyles = {
   ...styles,
   ...styles__FloatAnimation_A,
 };
 
-const AboutUs = () => {
+const AboutUs = ({ question, answer }) => {
+  const [isAccordionVisible, setIsAccordionVisible] = React.useState(false);
   return (
-    <div
-      style={combinedStyles}
-      className="my-4  pt-56 pr-6 pl-3 pb-6 relative border-r-8 "
-    >
-      <h2
-        style={styles__FloatAnimation_B}
-        className="delay-1000  bg-black border-3  text-white rounded-full text-center absolute z-10 bottom-48 right-3 px-3 py-6 uppercase font-bold "
+    <div>
+      <div
+        style={combinedStyles}
+        className="my-4  pt-56 pr-6 pl-3 pb-6 relative border-r-8 "
       >
-        About Us
-      </h2>
-      <p
-        style={styles__FloatAnimation_C}
-        className="bg-gray-900 border-2    delay-2000  text-white z-10 absolute top-14 rounded-3xl p-4"
-      >
-        At Epic Splash Pools, we specialize in creating breathtaking pools that
-        turn your backyard into an oasis. With our expertise and commitment to
-        quality, we bring your vision to life, providing exceptional
-        craftsmanship and unparalleled customer satisfaction.
-      </p>
+        
+        <h2
+          style={styles__FloatAnimation_B}
+          className="delay-1000  bg-black border-3  text-white rounded-full text-center absolute z-10 bottom-48 right-3 px-3 py-6 uppercase font-bold "
+        >
+          About Us
+        </h2>
+
+        <p
+          style={styles__FloatAnimation_C}
+          className="bg-gray-900 border-2 delay-2000  text-white z-10 absolute top-14 rounded-3xl p-4"
+        >
+          At Epic Splash Pools, we specialize in creating breathtaking pools
+          that turn your backyard into an oasis. With our expertise and
+          commitment to quality, we bring your vision to life, providing
+          exceptional craftsmanship and unparalleled customer satisfaction.
+        </p>
+      </div>
+
+      
+      {whyUsData.map((item, index) => (
+        <div
+          style={transitionAll}
+          className={` ${
+            isAccordionVisible ? "h-0 " : "h-full "
+          } transition-all duration-1000 ease-in-out`}
+        >
+          <AccordionItem
+            key={index}
+            question={item.question}
+            answer={item.answer}
+          />
+        </div>
+      ))}
     </div>
   );
 };

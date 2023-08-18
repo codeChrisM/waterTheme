@@ -25,7 +25,6 @@ section.show {
   opacity: 1;
 }
 
-.app {}
 
 .app::before {
   background-image: url("./img/WaterIcon.png");
@@ -580,7 +579,6 @@ iframe .vid-info {
 
 .top::before {
   content: "";
-  /* transform: rotate(10deg); */
   width: 90%;
   height: 800px;
   position: absolute;
@@ -597,27 +595,21 @@ iframe .vid-info {
 
 
 
-
-
-
-
-
-
 /* # Animation key frames to rotate .top::before 360 degrees over 25s */
 @keyframes spin {
   0% {
     transform: rotate(10deg);
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   70% {
-    transform: rotate(15deg);
-    border-radius: 100%;
+    transform: rotate(11deg);
+    /* border-radius: 100%; */
   }
 
   100% {
     transform: rotate(10deg);
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
 }

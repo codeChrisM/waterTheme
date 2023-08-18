@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+
 // import "./styles/styles.css";
 
 export default function HeroVideo() {
@@ -15,7 +16,7 @@ export default function HeroVideo() {
     backgroundSize: "cover",
     position: "absolute",
     mixBlendMode: "screen",
-    "border-radius": "50%",
+    // "border-us": "50%",
   };
 
   useEffect(() => {
@@ -27,17 +28,17 @@ export default function HeroVideo() {
       <div className={combinedClassName}>
         <div>
           <div className="vid-info bg-gold p-4  rounded-ee-full   bg-opacity-60 text-black">
-            <h1 className="vid-info__name text-2xl">
+            <h1 className="vid-info__name text-2xl ">
               Welcome to
-              <span className="vid-info__alias text-white mx-1  ">
-                <span className="font-bold text-purple ">Elite</span> Splash
-                Pools
+              <span className="vid-info__alias text-white   ">
+                <span className="block">
+                  <span className="font-bold text-purple ">Elite</span> Splash
+                  Pools
+                </span>
               </span>
-              <span
-                className="vid-info__summary
-              block"
-              >
-                Elite Designs & Pool Installations
+              <span className="vid-info__summary">
+                Elite Designs &{" "}
+                <span className="text-white">Pool Installations</span>
               </span>
             </h1>
           </div>
@@ -54,7 +55,7 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      <div style={styles} className="blue"></div>
+      <div style={styles} className=""></div>
     </section>
   );
 }

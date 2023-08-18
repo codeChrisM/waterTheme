@@ -11,17 +11,19 @@ import Footer from "./components/Footer";
 import faqData from "./data/faqData";
 import QuiltedImageList from "./components/QuiltedImageList";
 import ContactUs from "./components/ContactUs";
+// import { Disclosure } from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/20/solid";
 // import "./components/styles/styles.scss";
 
 const styles = {
   width: "100%",
-  // height: "340px",
 };
 
 const App = () => {
   // create an observern  that targets  section entries   and when intersecting adds  class name of show
 
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [isAccordionVisible, setIsAccordionVisible] = useState(false);
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
   };
@@ -34,12 +36,7 @@ const App = () => {
 
         <div className="">
           <HeroVideo className="snap-mandatory snap-center" />
-          {/* <div class="scroll-container">
-          <div class="scroll-area">1</div>
-          <div class="scroll-area">2</div>
-          <div class="scroll-area">3</div>
-          <div class="scroll-area">4</div>
-        </div> */}
+
           <div
             style={styles}
             className="relative rounded-full  py-30 snap-mandatory snap-center  "
@@ -56,12 +53,21 @@ const App = () => {
           <QuiltedImageList />
         </div>
         <div>
-          <div className="accordion-wrapper ">
-            <h2 className="font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20">
+          <div className={`accordion-wrapper  `}>
+            <h2></h2>
+            {/* button that will toggle the accordion */}
+
+            <button
+              onClick={() => setIsAccordionVisible(!isAccordionVisible)}
+              className={`font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20 w-full ${
+                isAccordionVisible ? "rounded-lg " : "rounded-none"
+              }`}
+            >
               Frequently Asked Questions
-            </h2>
+            </button>
+
             {faqData.map((item, index) => (
-              <div>
+              <div className={`${isAccordionVisible ? "hidden " : "visible"}`}>
                 <AccordionItem
                   key={index}
                   question={item.question}
