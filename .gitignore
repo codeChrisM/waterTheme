@@ -29,9 +29,9 @@ Icon?
 Desktop.ini
 
 # Ignore compiled code and build artifacts
-/build/
- /dist/
-/out/
+# /build/
+#  /dist/
+# /out/
 
 # Ignore dependency lock files
 yarn.lock
