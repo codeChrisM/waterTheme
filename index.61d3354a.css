@@ -341,10 +341,6 @@ img, video {
   margin-bottom: 10rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .block {
   display: block;
 }
@@ -361,16 +357,8 @@ img, video {
   display: none;
 }
 
-.h-0 {
-  height: 0;
-}
-
 .h-5 {
   height: 1.25rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .max-h-0 {
@@ -495,25 +483,13 @@ img, video {
 }
 
 .border-black {
-  border-color: #22252b;
-}
-
-.border-blue {
   --tw-border-opacity: 1;
-  border-color: rgb(53 125 186 / var(--tw-border-opacity));
+  border-color: rgb(34 37 43 / var(--tw-border-opacity));
 }
 
 .bg-black {
-  background-color: #22252b;
-}
-
-.bg-blue {
   --tw-bg-opacity: 1;
-  background-color: rgb(53 125 186 / var(--tw-bg-opacity));
-}
-
-.bg-gold {
-  background-color: #e7bc54;
+  background-color: rgb(34 37 43 / var(--tw-bg-opacity));
 }
 
 .bg-gray-900 {
@@ -521,17 +497,19 @@ img, video {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-purple {
-  background-color: #328ef2;
+.bg-teal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 124 123 / var(--tw-bg-opacity));
 }
 
-.bg-purple-secondary {
-  background-color: #428bd7;
+.bg-teal-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 190 187 / var(--tw-bg-opacity));
 }
 
 .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(248 249 249 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -544,6 +522,10 @@ img, video {
 
 .bg-opacity-90 {
   --tw-bg-opacity: .9;
+}
+
+.p-1 {
+  padding: .25rem;
 }
 
 .p-3 {
@@ -648,11 +630,8 @@ img, video {
 }
 
 .text-black {
-  color: #22252b;
-}
-
-.text-gold {
-  color: #e7bc54;
+  --tw-text-opacity: 1;
+  color: rgb(34 37 43 / var(--tw-text-opacity));
 }
 
 .text-gray-600 {
@@ -662,7 +641,7 @@ img, video {
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(248 249 249 / var(--tw-text-opacity));
 }
 
 .bg-blend-multiply {
@@ -691,10 +670,6 @@ img, video {
   transition-delay: 1s;
 }
 
-.duration-1000 {
-  transition-duration: 1s;
-}
-
 .duration-200 {
   transition-duration: .2s;
 }
@@ -715,12 +690,20 @@ img, video {
   transition-timing-function: cubic-bezier(0, 0, .2, 1);
 }
 
+selector {
+  --variable-name: value;
+  --teal: #0e7c7b;
+  --teal-secondary: #17bebb;
+  --blue-highlight: #428bd7;
+  --white: #f8f9f9;
+  ---black: #22252b;
+}
+
 *, body {
   font-family: REM, sans-serif;
 }
 
 body {
-  background-color: #cfba98;
   margin: 0;
   position: relative;
 }
@@ -737,8 +720,7 @@ section.show {
   content: "";
   z-index: -1;
   opacity: .5;
-  background-color: #cfba98;
-  background-image: url("elite-splash-logo-v1.7eb7eb9b.png");
+  background-color: #357dba;
   background-position: center;
   background-repeat: repeat;
   background-size: 250%;
@@ -754,7 +736,6 @@ section.show {
   opacity: .25;
   filter: blur(2em);
   background-color: #cfba98;
-  background-image: url("WaterIcon.064be6d8.png");
   background-repeat: repeat;
   background-size: 500px;
   width: 100%;
@@ -769,7 +750,6 @@ section.show {
     content: "";
     z-index: -1;
     background-color: #cfba98;
-    background-image: url("WaterIcon.064be6d8.png");
     background-repeat: repeat;
     background-size: 500px;
     width: 100%;
@@ -786,7 +766,6 @@ section.show {
     opacity: .5;
     filter: blur(2em);
     background-color: #cfba98;
-    background-image: url("WaterIcon.064be6d8.png");
     background-repeat: repeat;
     background-size: 500px;
     width: 100%;
@@ -818,7 +797,7 @@ section.show {
 }
 
 .scroll-area {
-  color: #fff;
+  color: var(--white);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -842,7 +821,6 @@ section.show {
 
 header {
   z-index: 11;
-  background-color: #1a1f24;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -855,7 +833,7 @@ header {
 header:before {
   content: "";
   z-index: -1;
-  border-top: 15px solid #4044ab;
+  border-top: 15px solid #17bebb;
   width: 100%;
   height: 100%;
   transition: opacity .3s;
@@ -921,10 +899,6 @@ section {
   min-height: 730px;
 }
 
-.text {
-  background-color: #0000;
-}
-
 .waves {
   width: 100%;
   height: 15vh;
@@ -937,7 +911,7 @@ section {
 .content {
   text-align: center;
   z-index: 2;
-  color: #fff;
+  color: var(--white);
   justify-content: center;
   width: auto;
   display: flex;
@@ -1044,10 +1018,10 @@ h1 {
 
 .ball {
   content: "";
-  color: #fff;
+  color: #f8f9f9;
   text-shadow: 0 3px 1px #1a1f24;
   z-index: 0;
-  background-color: #4044ab;
+  background-color: #0e7c7b;
   border-radius: 100%;
   justify-content: center;
   width: 200px;
@@ -1067,11 +1041,11 @@ h1 {
 
 .ball:before {
   content: "";
-  color: #fff;
+  background-color: var(--white);
+  color: var(--white);
   opacity: .5;
   filter: blur(5px);
   z-index: 0;
-  background-color: #fff;
   border-radius: 100%;
   justify-content: center;
   width: 20px;
@@ -1101,7 +1075,6 @@ h1 {
 }
 
 .menu {
-  background-color: #0000;
   flex-direction: column;
   gap: .5em;
   width: 80%;
@@ -1112,13 +1085,13 @@ h1 {
 }
 
 ul, li {
-  color: #fff;
+  color: var(--white);
   margin: 0;
   padding: 0;
 }
 
 .btn {
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
   font-size: 1em;
   text-decoration: none;
   transition: all .3s ease-in-out;
@@ -1224,16 +1197,8 @@ iframe .vid-info {
   }
 }
 
-.container--clipped {
-  z-index: -1;
-  background-color: red;
-  min-height: 500px;
-  position: relative;
-  bottom: 0;
-}
-
 footer {
-  background-color: #1a1f24;
+  background-color: var(--black);
   position: relative;
 }
 
@@ -1274,21 +1239,21 @@ footer {
 
 .btn:before {
   opacity: .2;
-  background: #357dba;
+  background-color: #17bebb;
   border-radius: 60% 70% 20% 40%;
   animation: 13s ease-in-out infinite alternate both water;
 }
 
 .btn:after {
   opacity: .5;
-  background: #357dba;
+  background-color: #17bebb;
   border-radius: 60% 70% 20% 40%;
   animation: 14s ease-in-out infinite alternate both water;
 }
 
 .btn:hover {
-  color: #fff;
-  background: #357dba;
+  background: var(--teal-secondary);
+  color: var(--white);
 }
 
 .btn:hover:before, .btn:hover:after {
@@ -1359,7 +1324,6 @@ footer {
 
 .cards .drop {
   text-align: center;
-  background-color: #357dba;
   flex-direction: column;
   justify-content: center;
   align-items: center;
