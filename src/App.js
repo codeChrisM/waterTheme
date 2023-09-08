@@ -1,18 +1,19 @@
 // App.js
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import MainHeader from "./components/MainHeader";
 import SlideOutComponent from "./components/SlideOutComponent";
 import WaterDrops from "./components/WaterDrops";
 import HeroVideo from "./components/HeroVideo";
 import AboutUs from "./components/AboutUs";
-import AccordionItem from "./components/AccordianItem";
 import Footer from "./components/Footer";
-import faqData from "./data/faqData";
+
 import QuiltedImageList from "./components/QuiltedImageList";
 import ContactUs from "./components/ContactUs";
-// import { Disclosure } from "@headlessui/react";
-import { ChevronUpIcon } from "@heroicons/react/20/solid";
+import FileDownloadButton from "./components/FileDownloadButton";
+import Description from "./components/Description";
+import Faq from "./components/Faq.js";
+
 // import "./components/styles/styles.scss";
 
 const styles = {
@@ -20,10 +21,9 @@ const styles = {
 };
 
 const App = () => {
-  // create an observern  that targets  section entries   and when intersecting adds  class name of show
+  const ref = useRef(null);
 
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [isAccordionVisible, setIsAccordionVisible] = useState(false);
   const toggleMenu = () => {
     setIsMenuVisible(!isMenuVisible);
   };
@@ -32,11 +32,15 @@ const App = () => {
     <div className="app">
       <MainHeader toggleMenu={toggleMenu} />
       <div className=" relative">
-        <SlideOutComponent isMenuVis={isMenuVisible} />
-
+        <SlideOutComponent
+          isMenuVis={isMenuVisible}
+          toggleMenu={toggleMenu}
+          ref={ref}
+        />
         <div className="">
           <HeroVideo className="snap-mandatory snap-center" />
 
+          <div id="about-us" className=" h-8"></div>
           <div
             style={styles}
             className="relative rounded-full  py-30 snap-mandatory snap-center  "
@@ -44,43 +48,31 @@ const App = () => {
             <AboutUs />
           </div>
 
-          <div>
-            <WaterDrops />
-          </div>
+          <WaterDrops />
         </div>
-
+        <div className="description text-white  bg-black m-6 flex p-4 self-center rounded-xl ">
+          <Description />
+        </div>
         <div>
           <QuiltedImageList />
-        </div>
-        <div>
-          <div className={`accordion-wrapper  `}>
-            <h2></h2>
-            {/* button that will toggle the accordion */}
-
-            <button
-              onClick={() => setIsAccordionVisible(!isAccordionVisible)}
-              className={`font-bold text-2xl p-4 text-gold border-bottom-purple border-bottom-2 border-solid bg-black rounded-t-lg mt-20 w-full ${
-                isAccordionVisible ? "rounded-lg " : "rounded-none"
-              }`}
-            >
-              Frequently Asked Questions
-            </button>
-
-            {faqData.map((item, index) => (
-              <div className={`${isAccordionVisible ? "hidden " : "visible"}`}>
-                <AccordionItem
-                  key={index}
-                  question={item.question}
-                  answer={item.answer}
-                />
-              </div>
-            ))}
+          <div className="mt-2 flex items-center">
+            <FileDownloadButton />
           </div>
         </div>
-        <div className="contact-us-Wrapper my-10">
-          <ContactUs />
-        </div>
+        <div className="faq block my-40 relative">
+          <div
+            id="contact-us"
+            className="h-8 bg-red-300 absolute top-0 z-10"
+          ></div>
 
+          <Faq />
+
+          <div className="contact-us-Wrapper my-30 mt-10 mx-auto ">
+            {/* TODO: change the color on the contact us form to teal */}
+
+            <ContactUs />
+          </div>
+        </div>
         <Footer />
       </div>
     </div>

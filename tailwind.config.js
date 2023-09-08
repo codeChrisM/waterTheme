@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        purple: "#4044AB",
-        "purple-secondary": "#7372A4",
-        gold: "#CFBA98",
-        blue: "#357DBA",
-        black: "#1A1F24",
+        teal: "#0E7C7B", //teal
+        "teal-secondary": "#17BEBB",
+        "blue-highlight": "#17BEBB",
+        white: "#F8F9F9",
+        black: "#22252B",
       },
     },
   },

@@ -1,7 +1,7 @@
 import React from "react";
 import SlideOut__Content from "./SlideOut__Content";
 
-const SlideOutComponent = ({ isMenuVis }) => {
+const SlideOutComponent = ({ isMenuVis, toggleMenu }) => {
   return (
     <div className={`component--slide-out ${isMenuVis ? "show" : ""} `}>
       {/* Waves Container */}
@@ -21,25 +21,13 @@ const SlideOutComponent = ({ isMenuVis }) => {
             />
           </defs>
           <g className="parallax">
-            {/* <use
-              xlinkHref="#slide-out-component-gentle-wave"
-              x="48"
-              y="5"
-              fill="rgba(26, 31, 36, 0.5)"
-            /> */}
-
             <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="3"
-              fill="rgba(113, 132, 201, 1)"
+              fill="rgba(23, 190, 187, 1)"
             />
-            {/* <use
-              xlinkHref="#slide-out-component-gentle-wave"
-              x="48"
-              y="0"
-              fill="rgba(26, 31, 36, .3)"
-            /> */}
+
             <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
@@ -52,7 +40,7 @@ const SlideOutComponent = ({ isMenuVis }) => {
       {/* Waves end */}
 
       <div className="container--menu">
-        <div className="ball bg-blue">
+        <div className="ball ">
           <div className="text">Menu</div>
         </div>
 
@@ -77,20 +65,9 @@ const SlideOutComponent = ({ isMenuVis }) => {
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="5"
-                fill="rgba(113, 132, 201, 1)"
+                fill="rgba(23, 190, 187, 1)"
               />
-              {/* <use
-                xlinkHref="#slide-out-component-gentle-wave"
-                x="48"
-                y="3"
-                fill="rgba(113, 132, 201, 1)"
-              /> */}
-              {/* <use
-                xlinkHref="#slide-out-component-gentle-wave"
-                x="48"
-                y="0"
-                fill="rgba(113, 132, 201, 1)"
-              /> */}
+
               <use
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
@@ -103,7 +80,7 @@ const SlideOutComponent = ({ isMenuVis }) => {
         {/* Waves end */}
 
         {/* Content starts */}
-        <SlideOut__Content />
+        <SlideOut__Content toggleMenu={toggleMenu} />
         {/* Content ends */}
       </div>
     </div>

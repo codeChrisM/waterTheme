@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* css color variables */
+selector {
+  --variable-name: value;
+  --teal: #0E7C7B;
+  --teal-secondary: #17BEBB;
+  --blue-highlight: #428BD7;
+  --white: #f8f9f9;
+  ---black: #22252B;
+}
+
+
 *,
 body {
   font-family: "Jost", sans-serif;
@@ -9,15 +20,12 @@ body {
 }
 
 body {
-  /* overflow: hidden; */
-  background-color: #CFBA98;
   margin: 0;
   position: relative;
 }
 
 
 section {
-  /* opacity: 0; */
   transition: all 1s;
 }
 
@@ -27,25 +35,20 @@ section.show {
 
 
 .app::before {
-  background-image: url("./img/WaterIcon.png");
   background-position: center;
   background-repeat: repeat;
   background-size: 250%;
-  background-color: #CFBA98;
+  background-color: #357DBA;
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  /* top: -50%; */
   left: 0;
   z-index: -1;
-  /* filter: blur(.25em); */
   opacity: .5;
-  /* transform: rotate(30deg); */
 }
 
 .app::after {
-  background-image: url("./img/WaterIcon.png");
   background-color: #CFBA98;
   background-repeat: repeat;
   background-size: 500px;
@@ -57,14 +60,12 @@ section.show {
   left: -50%;
   z-index: -1;
   opacity: .25;
-  /* transform: rotate(30deg); */
   filter: blur(2em);
 }
 
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .app::before {
-    background-image: url("./img/WaterIcon.png");
     background-repeat: repeat;
     background-size: 500px;
     background-color: #CFBA98;
@@ -80,7 +81,6 @@ section.show {
   }
 
   .app::after {
-    background-image: url("./img/WaterIcon.png");
     background-color: #CFBA98;
     background-repeat: repeat;
     background-size: 500px;
@@ -95,7 +95,7 @@ section.show {
     transform: rotate(30deg);
     filter: blur(2em);
   }
-}
+} */
 
 
 
@@ -124,7 +124,7 @@ section.show {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
 }
 
 .scroll-area:nth-of-type(1) {
@@ -144,7 +144,7 @@ section.show {
 }
 
 header {
-  background-color: #1A1F24;
+
   padding: 0.5em 1em;
   display: flex;
   justify-content: space-between;
@@ -152,10 +152,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 999;
-  /* animtaiton for slide in from the top */
   animation: slide-in-top 1.7s ease-in both;
   z-index: 11;
-  /* animation-delay: 0.5s; */
 }
 
 header::before {
@@ -166,8 +164,7 @@ header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: red; */
-  border-top: #4044AB solid 15px;
+  border-top: #17BEBB solid 15px;
   transition: opacity 0.3s;
 
   /* animtaiton for slide in from the top that repeats infinitely */
@@ -199,22 +196,18 @@ header::before {
 @keyframes slide-in-top-after {
   0% {
     /* opacity: 0; */
-    /* background-color: #2596be; */
     transform: translateY(-15px);
   }
 
   50% {
-    /* background-  color: #CFBA98; */
     transform: translateY(-13px);
   }
 
   80% {
-    /* background-color: #2596be; */
     transform: translateY(-14px);
   }
 
   100% {
-    /* background-color: #1a1f24; */
     transform: translateY(-15px);
   }
 }
@@ -234,23 +227,15 @@ header::before {
 }
 
 section {
-  /* background-color: red; */
-  /* background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%); */
-  /* clip-path: ellipse(100% 55% at 48% 44%); */
   position: relative;
-  /* border: solid 5px yellow; */
-  /* height: 100vh; */
 }
 
 .hero {
-  /* background-color: white; */
   background-color: #CFBA98;
   min-height: 730px;
 }
 
-.text {
-  background-color: transparent;
-}
+
 
 .waves {
   position: relative;
@@ -268,7 +253,7 @@ section {
   justify-content: center;
   text-align: center;
   z-index: 2;
-  color: white;
+  color: var(--white);
   width: auto;
 }
 
@@ -380,9 +365,13 @@ h1 {
   left: -0%;
   width: 200px;
   height: 150px;
-  background-color: #4044AB;
+  /* TODO: don't know why can't use variable name */
+  /* background-color: var(--teal); */
+  background-color: #0E7C7B;
   display: flex;
-  color: white;
+  /* TODO: don't know why can't use variable name */
+  /* color: var(--white); */
+  color: #f8f9f9;
   text-shadow: 0 3px 1px #1A1F24;
   box-shadow: 0px 5px 40px gray inset;
   justify-content: center;
@@ -403,9 +392,9 @@ h1 {
   left: 150px;
   width: 20px;
   height: 15px;
-  background-color: white;
+  background-color: var(--white);
   display: flex;
-  color: white;
+  color: var(--white);
   opacity: 0.5;
   filter: blur(5px);
   justify-content: center;
@@ -439,20 +428,20 @@ h1 {
   margin-top: 4em;
   gap: 0.5em;
   font-size: 1.5em;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 
 ul,
 li {
   margin: 0;
   padding: 0;
-  color: white;
+  color: var(--white);
 }
 
 .btn {
   font-size: 1em;
   overflow: hidden;
-  border: 2px solid white;
+  border: 2px solid var(--white);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
@@ -495,30 +484,13 @@ li {
   position: absolute;
   top: 20em;
   left: 11vw;
-  /* color: #fff; */
+
   z-index: 5;
 }
 
-.vid-info__name {
-  /* color: #CFBA98; */
-  /* font-size: 1.5em; */
-}
 
-.vid-info__alias {
-  /* color: rgba(#AB1795, 0.75); */
-  /* font-size: 2.75rem; */
-  /* font-weight: 700; */
-  /* margin: 0; */
-  /* text-shadow: -1em 1em 0em #1A1F24; */
-}
 
-.vid-info__summary {
-  /* background-color: rgba(19, 56, 159, 0.7); */
-  /* padding: 0.5em 1em; */
-  /* border-radius: 10px; */
-  /* width: auto; */
-  /* display: inline-block; */
-}
+
 
 /*---prob have to be injected with script--*/
 iframe .vid-info {
@@ -529,7 +501,7 @@ iframe .vid-info {
 }
 
 .video-foreground {
-  border: 10px solid blue;
+  /* border: 10px solid blue; */
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -585,11 +557,14 @@ iframe .vid-info {
   z-index: 999;
   background: black;
   animation: spin 5s ease-in-out infinite;
+  /* border-radius: 100%; */
 }
 
 @media (min-width: 768px) {
   .top::before {
-    min-width: 1000px;
+    border-radius: 100%;
+    /* min-width: 1000px; */
+    /* width: 100%; */
   }
 }
 
@@ -616,25 +591,10 @@ iframe .vid-info {
 
 
 
-.container--clipped {
-  background-color: red;
-  bottom: 0;
-  z-index: -1;
-  position: relative;
-  min-height: 500px;
-}
-
-.faq {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  color: white;
-
-}
 
 footer {
   position: relative;
-  background-color: #1A1F24;
+  background-color: var(--black);
 }
 
 
@@ -659,14 +619,9 @@ footer {
 .btn {
   position: relative;
   text-decoration: none;
-  /* color: #357dba; */
-  /* border: 1px solid #357dba; */
-  /* padding: 1.3em; */
-  /* text-transform: uppercase; */
   overflow: hidden;
   display: flex;
   justify-content: center;
-  /* align-items: flex-end stretch; */
   letter-spacing: 2px;
   z-index: 1;
   transition: all 1s ease;
@@ -685,21 +640,25 @@ footer {
 
 .btn:before {
   border-radius: 60% 70% 20% 40%;
-  background: #357dba;
+  /* TODO: issue with using variable names */
+  /* background: var(--teal-secondary); */
+  background-color: #17BEBB;
   opacity: .2;
   animation: water 13s ease-in-out infinite both alternate;
 }
 
 .btn:after {
   border-radius: 60% 70% 20% 40%;
-  background: #357dba;
+  /* TODO: issue with using variable names */
+  /* background: var(--teal-secondary); */
+  background-color: #17BEBB;
   opacity: .5;
   animation: water 14s ease-in-out infinite both alternate;
 }
 
 .btn:hover {
-  background: #357dba;
-  color: white;
+  background: var(--teal-secondary);
+  color: var(--white);
 }
 
 .btn:hover:before,

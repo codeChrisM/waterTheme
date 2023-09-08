@@ -6,10 +6,16 @@ function Footer() {
   };
 
   return (
-    <div className="footer bg-black p-3 mt-10">
+    <div className="footer bg-black p-1 mt-4  ">
       {/* year and copyright text */}
       <p className="text-white text-center w-full">
         © {grabTheDate()} Elite Splash Pools. All rights reserved.
+        <a
+          className="text-gray-600 text-sm block m-2"
+          href="https://www.codechris.com"
+        >
+          contact developer of website
+        </a>
       </p>
     </div>
   );

@@ -7,7 +7,7 @@ const faqData = [
   {
     question: "How much do fiberglass pools cost?",
     answer:
-      "The cost of a fiberglass pool can vary depending upon the size and the features your project requires. Overall, fiberglass pools have a lower total cost of ownership versus concrete or vinyl liner pools. At our company, we work with several reputable lenders that offer great rates for financing, so getting into a fiberglass pool has never been easier.",
+      "The cost of a fiberglass pool can vary depending upon the size and the features your project requires. Overall, fiberglass pools have a lower total cost of ownership versus concrete or vinyl liner pools. ",
   },
   {
     question: "Can you do a saltwater pool?",
@@ -26,11 +26,11 @@ const faqData = [
       "The gel coat finish on our pools enables them to have a stain-resistant smooth surface that cleans easily and requires less maintenance. However, improper care and maintenance can impact the look of your pool. Maintaining the proper pool chemistry is very important for the health of any pool.",
   },
 
-  {
-    question: "What kind of pool designs do you offer?",
-    answer:
-      "We offer a wide variety of swimming pools. We offer rectangular pools, free form pools, swim spas, spas, tanning ledges and more. Our pools come in a variety of sizes and are designed to fit in any environment, both indoor and outdoor. Our pools can also be used in commercial settings. ",
-  },
+  // {
+  //   question: "What kind of pool designs do you offer?",
+  //   answer:
+  //     "We offer a wide variety of swimming pools. We offer rectangular pools, free form pools, swim spas, spas, tanning ledges and more. Our pools come in a variety of sizes and are designed to fit in any environment, both indoor and outdoor. Our pools can also be used in commercial settings. ",
+  // },
 
   // {
   //   question:
@@ -44,11 +44,6 @@ const faqData = [
       "Our pools come pre-formed with all the features that you’ve come to expect already included. When you purchase your pool, it will arrive ready to be installed and in the color of your choice. Our pools can be installed rather quickly once the hole has been dug and your installer has everything ready to go.",
   },
 
-  {
-    question: "Can a fiberglass pool be installed in cold weather climates?",
-    answer:
-      "We have thousands of fiberglass pools in the ground across the Unites States and the world. We have never had an issue with our pools in either cold or hot weather conditions. Like most valuable investments, a fiberglass pool requires care and maintenance and should provide years of fun and excitement for your family.",
-  },
   // {
   //   question: "Where can I get a Barrier Reef fiberglass pool?",
   //   answer:
@@ -57,7 +52,7 @@ const faqData = [
   {
     question: "Do you offer a plunge pool?",
     answer:
-      "We offer the Outback Escape. The Outback Escape is a hybrid fiberglass pool that can be used as a swim spa, a plunge pool, or a fitness pool. This new pool model is a versatile pool for many reasons and takes up a much smaller footprint when compared to a traditional in-ground swimming pool. These pools feature entry steps, sitting ledges, lounger ledges, a wide swim lane and optional swim jets.",
+      "We offer the Outback Escape. The Outback Escape is a hybrid fiberglass pool that can be used as a swim spa, a plunge pool, or a fitness pool. This new pool model is a versatile pool for many reasons and takes up a much smaller footprint when compared to a traditional in-ground swimming pool. These pools feature entry steps, sitting ledges and  lounger ledges",
   },
   // {
   //   question: "What is a lounger ledge?",
@@ -79,11 +74,7 @@ const faqData = [
   //   answer:
   //     "In most circumstances you will contact your installer directly to handle problems that arise with your pool. It’s unusual for something to be directly wrong with the pool, but if it requires our attention, we will work with the installer to help get you back into the water and having fun.",
   // },
-  {
-    question: "Do you sell pool chemicals?",
-    answer:
-      "We will give you everything you need to maintain your pool. As well as instructions.with a list of pool chemicals that you can purchase at your local pool supply store. If maintainance is a strong concern of yours, we can recommend a pool maintance company to assist you.",
-  },
+
   // {
   //   question: "How will the pool be delivered and installed?",
   //   answer:

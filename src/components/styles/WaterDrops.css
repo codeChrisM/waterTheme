@@ -25,7 +25,7 @@
         overflow: hidden;
         text-align: center;
         animation: drop 2s infinite alternate ease-in-out;
-        background-color: #357dba
+
     }
 
     .cards .drop:nth-child(1) {

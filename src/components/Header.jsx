@@ -1,7 +1,7 @@
 import React from "react";
 
 let temportaryStyle = {
-  backgroundColor: "blue",
+  
   width: "100%",
   height: "auto",
 };
