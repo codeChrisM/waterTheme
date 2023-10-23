@@ -8,7 +8,7 @@ const JotFormIframe = ({ ref }) => {
         ref={ref}
         url="https://form.jotform.com/232114601026136"
         id="JotFormIFrame-232114601026136"
-        title="Lime Theme Contact Us Form"
+        title="Elite Splash Pools Contact Us Form"
         allowTransparency
         allowFullScreen
         width="100%"

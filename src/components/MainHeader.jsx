@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import eliteSlashLogo from "../img/elite-splash-logo-v1.png";
+import eliteSlashLogoFull from "../img/elite-splash-logo-v1-full.png";
 
 function MainHeader({ MainHeaderClassName, toggleMenu }) {
   const [fadeIn, setFadeIn] = useState(false);
@@ -15,12 +16,25 @@ function MainHeader({ MainHeaderClassName, toggleMenu }) {
 
   return (
     <>
-      <header style={fadeInStyle} className="bg-teal w-full border-b-2">
-        <div className="bg-blend-multiply">
-          <img src={eliteSlashLogo} className="w-9" alt="" />
+      <header
+        style={fadeInStyle}
+        className="bg-white w-full border-b-2 bg-fuchsia-300"
+      >
+        <div className=" justify-end">
+          <img
+            src={eliteSlashLogo}
+            className=""
+            style={{ maxWidth: "3rem" }}
+            alt=""
+          />
         </div>
         <div className=" text-l text-white">
-          <span className="">Elite</span> Splash Pools
+          <img
+            src={eliteSlashLogoFull}
+            className="   "
+            alt="#415EB9 Elite Splash Pools"
+            style={{ maxWidth: "7rem" }}
+          />
         </div>
         <div className="icons flex gap-2">
           <a href="tel:+1234567890" className="phone md:hidden">

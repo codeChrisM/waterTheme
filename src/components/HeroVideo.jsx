@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import FullLogo from "../img/elite-splash-logo-v1-full.png";
 
 // import "./styles/styles.css";
 
@@ -27,17 +28,13 @@ export default function HeroVideo() {
     <section className="hero overflow-hidden ">
       <div className={combinedClassName}>
         <div>
-          <div className="vid-info bg-teal-secondary bg-opacity-50 p-4  rounded-ee-full   bg-opacity-60 text-black">
+          <div className="vid-info bg-white bg-opacity-50   rounded-ee-full   bg-opacity-60 text-black">
             <h1 className="vid-info__name  text-md text-white">
               <span className="block">
-                <span className="font-bold  block text-2xl text-shadow-lg">
-                  Elite
-                </span>
-                <span className="  block text-2xl text-shadow-lg">Splash</span>
-                <span className="  block text-lg text-shadow-lg">Pools</span>
+                <img {...{ src: FullLogo }}></img>
               </span>
 
-              <span className="text-sm bg-teal-secondary rounded-md p-1 text-black">
+              <span className="text-sm  p-1 ">
                 Designs & Pool Installations
               </span>
             </h1>

@@ -8,7 +8,6 @@ let AnimationStyles = {
 
 function WaterDrops(toggleMenu) {
   const handleContactUs = () => {
-    toggleMenu();
     window.scrollTo(100, 0);
     document.getElementById("contact-us").scrollIntoView({
       behavior: "smooth",

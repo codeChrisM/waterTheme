@@ -12,7 +12,7 @@ function Faq() {
     <div className="flex w-full justify-center items-center flex-col">
       <button
         onClick={() => setIsAccordionVisible(!isAccordionVisible)}
-        className={`font-bold text-2xl p-4   flex rounded-t-lg  w-full   max-w-md text-center text-black bg-teal-secondary ${
+        className={`font-bold text-2xl p-4   flex rounded-t-lg  w-full   max-w-md text-center text-black ${
           isAccordionVisible ? "rounded-none " : "rounded-lg"
         }`}
       >
@@ -24,7 +24,7 @@ function Faq() {
         />
       </button>
       <div
-        className={`questions bg-teal ${isAccordionVisible ? " p-4" : "px-2"}`}
+        className={`questions  ${isAccordionVisible ? " p-4" : "px-2"}`}
       >
         {faqData.map((item, index) => (
           <div className={`${isAccordionVisible ? "visible " : "hidden"}`}>

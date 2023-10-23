@@ -1,6 +1,10 @@
 import React from "react";
 import SlideOut__Content from "./SlideOut__Content";
 
+const baseColor = "#F8F9F9";
+const secondaryColor = "rgba(12, 181, 252, 1)";
+const thrirdColor = "#026893";
+
 const SlideOutComponent = ({ isMenuVis, toggleMenu }) => {
   return (
     <div className={`component--slide-out ${isMenuVis ? "show" : ""} `}>
@@ -25,24 +29,26 @@ const SlideOutComponent = ({ isMenuVis, toggleMenu }) => {
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="3"
-              fill="rgba(23, 190, 187, 1)"
+              fill="rgba(12, 181, 252, 1)"
             />
 
             <use
               xlinkHref="#slide-out-component-gentle-wave"
               x="48"
               y="7"
-              fill="#1A1f24"
+              {...{ fill: baseColor }}
             />
           </g>
         </svg>
       </div>
-      {/* Waves end */}
+      {/*-------------------------- Waves end */}
 
       <div className="container--menu">
+        {/* Menu Ball */}
         <div className="ball ">
-          <div className="text">Menu</div>
+          <div className="text" onClick={toggleMenu}>Menu</div>
         </div>
+        {/* --------------------------Menu Ball */}
 
         {/* Waves Container */}
         <div className="container--side ">
@@ -65,19 +71,19 @@ const SlideOutComponent = ({ isMenuVis, toggleMenu }) => {
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="5"
-                fill="rgba(23, 190, 187, 1)"
+                fill="rgba(12, 181, 252, 1)"
               />
 
               <use
                 xlinkHref="#slide-out-component-gentle-wave"
                 x="48"
                 y="7"
-                fill="#1A1f24"
+                {...{ fill: baseColor }}
               />
             </g>
           </svg>
         </div>
-        {/* Waves end */}
+        {/*-------------------------- Waves end */}
 
         {/* Content starts */}
         <SlideOut__Content toggleMenu={toggleMenu} />

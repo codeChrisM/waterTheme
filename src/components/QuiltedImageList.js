@@ -48,17 +48,17 @@ const itemData = [
     cols: 2,
   },
   {
-    img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
+    img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Coral-Sea-Aquamarine-960x720.jpg",
 
     title: "Burger",
   },
   {
-    img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Billabong-Splash-Ocean-800x600.jpg",
+    img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Whitsunday-with-horseshoe-spa-california-1920x1080.jpg",
 
     title: "Camera",
   },
   {
-    img: Watericon,
+    img: "https://www.brpoolsusa.com/_c/wp-content/uploads/2022/02/Milano-Aquamarine-scaled-800x600.jpg",
 
     title: "Coffee",
     cols: 2,
